@@ -9,19 +9,19 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 
-import javafx.geometry.Bounds;
-import javafx.geometry.Point2D;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.ListView;
+import javafx.scene.control.CheckBox;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
-import javafx.scene.robot.Robot;
-import javafx.scene.shape.Line;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontPosture;
+import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Pair;
@@ -290,13 +290,6 @@ public class PleaseProvideControllerClassName implements Initializable {
     private Button Exit;
 
     @FXML
-    private ListView<String> list;
-
-    @FXML
-    private ImageView Coll;
-
-
-    @FXML
     void ExitAction(ActionEvent event) {
         ((Stage)pane.getScene().getWindow()).close();
 
@@ -313,6 +306,12 @@ public class PleaseProvideControllerClassName implements Initializable {
 
     @FXML
     private HBox hbox;
+
+    @FXML
+    private Pane pane_left;
+
+    @FXML
+    private VBox Vbox_list;
 
 
     @Override
@@ -331,9 +330,18 @@ public class PleaseProvideControllerClassName implements Initializable {
 
         Marker marker = new Marker(UserPath.CollegeOne,pane,100,100);
         engine.getWrapperList().get(0).connect(marker);
+        Vbox_list.getChildren().addAll(
+                getCheckBoxStyle("Сила Сибири"),
+                getCheckBoxStyle("Сила Сибири2"),
+                getCheckBoxStyle("Сила Сибири3")
+                );
+        Vbox_list.setSpacing(30);
 
-        //list.getItems().addAll("Сила Сибири","Амурскй ГПЗ","...","...","...");
-        //list.setFixedCellSize(60);
+
+        //List_val.getItems().addAll("Сила Сибири","Амурскй ГПЗ","...","...","...");
+        //List_val.setFixedCellSize(60);
+        //List_val.setMaxHeight(500);
+
     }
     public void update(boolean admin){
         if(!admin) {
@@ -355,7 +363,7 @@ public class PleaseProvideControllerClassName implements Initializable {
         double height = scene.getHeight();
 
 
-
+        double WIDTH_CONST_AMENDMENT = 20;
         double WIDTH_CONST  = width/30;
 
 
@@ -390,6 +398,10 @@ public class PleaseProvideControllerClassName implements Initializable {
                 }
             }
         });
+        hbox.setScaleX(0.6);
+        hbox.setScaleY(0.6);
+        hbox.setLayoutY(hbox.getLayoutY() - 30);
+        hbox.setLayoutX(hbox.getLayoutX() - 60);
         indexChild = 0;
         updateHBoxChild(0);
         hbox.setDisable(true);
@@ -402,7 +414,8 @@ public class PleaseProvideControllerClassName implements Initializable {
 
 
 
-
+        //amendment
+        width -= WIDTH_CONST_AMENDMENT;
 
         double coeff = Math.min(width/pane.getWidth(),height/pane.getHeight());
         pane.setScaleX(coeff);
@@ -415,10 +428,16 @@ public class PleaseProvideControllerClassName implements Initializable {
 
 
         pane.setOnMouseClicked(mouseEvent -> {
-
             Marker marker = new Marker(Marker.actualUserPath,pane,mouseEvent.getX(),mouseEvent.getY());
             engine.getWrapperList().get(0).connect(marker);
+
         });
+
+
+        // correct pane with map
+        pane.setLayoutY(pane.getLayoutY() + 30);
+
+
 
     }
 
@@ -434,6 +453,12 @@ public class PleaseProvideControllerClassName implements Initializable {
             Node node = hbox.getChildren().get(index);
             node.setEffect(null);
         }
+    }
+    private Node getCheckBoxStyle(String val){
+        CheckBox checkBox = new CheckBox(val);
+        checkBox.getStylesheets().add(String.valueOf(getClass().getResource("/styles.css")));
+        checkBox.setFont(Font.font("times new roman", FontWeight.BOLD, FontPosture.REGULAR, 20));
+        return checkBox;
     }
 
 
