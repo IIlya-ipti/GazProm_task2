@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gazprom_task2.PleaseProvideControllerClassName">
+   <children>
+      <Pane fx:id="pane" prefHeight="397.0" prefWidth="733.0">
+         <children>
+            <ImageView fitHeight="437.0" fitWidth="730.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Map.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Irkutsk" fitWidth="109.0" layoutX="395.0" layoutY="222.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Irkutsk.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Yamal_Nenezkiy" fitWidth="100.0" layoutX="246.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Ямало-Ненецкий%20автономный%20округ.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Krasnor_kray" depthTest="DISABLE" fitWidth="132.5" layoutX="313.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true" scaleX="0.95">
+               <image>
+                  <Image url="@One.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Yakutia" fitHeight="208.0" layoutX="419.0" layoutY="64.5" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@three.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Chukotskyy" fitHeight="91.0" layoutX="589.7999877929688" layoutY="11.400001525878906" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Chukotka.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Camchatka" fitHeight="137.6" layoutX="630.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Kmachatcka.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Magadan" fitWidth="71.6" layoutX="583.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Magadan.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Habarovsk" fitHeight="152.0" layoutX="559.4000244140625" layoutY="168.8000030517578" pickOnBounds="true" preserveRatio="true" scaleX="0.97" scaleY="1.01">
+               <image>
+                  <Image url="@Habarovsk.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Cahalin" fitWidth="54.0" layoutX="623.0" layoutY="235.5" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Cahalin.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Primorsky" fitWidth="32.0" layoutX="615.0" layoutY="294.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Primorsky.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Evreyskii" fitHeight="16.4" layoutX="595.5" layoutY="305.79998779296875" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Evreyskii.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Amurskaya" fitWidth="92.0" layoutX="508.0" layoutY="255.39999389648438" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Amurskaya.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Zabaykal" fitHeight="91.6" layoutX="468.0" layoutY="263.8999938964844" pickOnBounds="true" preserveRatio="true" scaleX="0.98" scaleY="1.02">
+               <image>
+                  <Image url="@ZaBaykal.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Buratya" fitWidth="92.1" layoutX="413.70001220703125" layoutY="279.0" pickOnBounds="true" preserveRatio="true" scaleX="0.99" scaleY="1.03">
+               <image>
+                  <Image url="@Buratya.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Tuva" fitWidth="56.3" layoutX="360.0" layoutY="331.0" pickOnBounds="true" preserveRatio="true" scaleX="1.01" scaleY="1.03">
+               <image>
+                  <Image url="@Тыва.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Hakasya" fitHeight="35.0" layoutX="354.0" layoutY="318.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Хакасия.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Altay" fitWidth="34.0" layoutX="332.0" layoutY="343.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Алтай.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Kemerovskaya" fitHeight="40.0" layoutX="336.2" layoutY="304.3" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Кемеровская_область.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Tomskaya" fitWidth="70.5" layoutX="291.2" layoutY="263.5" pickOnBounds="true" preserveRatio="true" scaleX="0.99">
+               <image>
+                  <Image url="@Tomskaya.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Novosibirsk" fitHeight="34.0" layoutX="287.6" layoutY="299.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Novosibirsk.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Altayskii" fitHeight="34.0" layoutX="298.0" layoutY="326.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Алтайский.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Omskaya" fitWidth="33.0" layoutX="264.3" layoutY="282.1" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Омская.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Tumenskaya" fitWidth="56.0" layoutX="239.0" layoutY="266.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Тюменская.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Hantu" fitWidth="118.9" layoutX="227.2" layoutY="202.7" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Ханты-Мансийская.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Kurganskaya" fitWidth="36.0" layoutX="219.4" layoutY="289.4" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Курганская_область.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Sverdlovskaya" fitWidth="51.4" layoutX="199.0" layoutY="236.5" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Свердловская.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Chelubinsk" fitWidth="31.0" layoutX="194.6" layoutY="288.2" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Челябинская.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Bashkortostan" fitWidth="37.0" layoutX="173.6" layoutY="278.3" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Башкортостан.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Orenburg" fitHeight="46.5" layoutX="151.0" layoutY="290.5" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Оренбургская.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Samarskaya" fitWidth="27.0" layoutX="143.4" layoutY="285.7" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Самарская.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Saratovskaya" fitWidth="43.0" layoutX="110.0" layoutY="285.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Саратовская.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Volgogradskaya" fitWidth="37.0" layoutX="93.0" layoutY="292.3" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Volgogradskaya.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Astrahanskaya" fitWidth="17.0" layoutX="109.3" layoutY="320.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Архангельская.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Kalmukuya" fitWidth="40.6" layoutX="76.0" layoutY="318.6" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Калмыкия.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Rostov" fitWidth="36.0" layoutX="65.6" layoutY="297.6" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Ростовская.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Krasnodarskyy" fitWidth="25.4" layoutX="54.2" layoutY="316.2" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Краснодарский_край.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Adugaia" fitWidth="10.4" layoutX="60.1" layoutY="327.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Адыгея.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Stavropol" fitWidth="27.4" layoutX="72.4" layoutY="330.2" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Ставропольский_край.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Cherkesia" fitWidth="13.0" layoutX="65.9" layoutY="342.5" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Карачаево_черессия.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Cabardin" fitWidth="16.0" layoutX="74.0" layoutY="350.3" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Kabardinskaya.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Ingushatya" fitWidth="12.0" layoutX="85.4" layoutY="357.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Ингушетия.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Chechenskaya" fitHeight="12.0" fitWidth="14.0" layoutX="88.0" layoutY="359.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Чеченская.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Dagestan" fitWidth="17.0" layoutX="90.0" layoutY="351.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Дагестан.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Krum" fitWidth="24.0" layoutX="29.5" layoutY="302.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Крым.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Voroneg" fitWidth="25.0" layoutX="86.0" layoutY="276.7" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Voroneg.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Belgorodskaya" fitWidth="18.0" layoutX="71.4" layoutY="275.5" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Белгородская_область.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Kurskaya" fitWidth="22.0" layoutX="70.3" layoutY="263.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Курская.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Branskaya" fitWidth="22.0" layoutX="62.0" layoutY="244.2" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Брянская.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Orlovskaya" fitHeight="17.5" layoutX="78.0" layoutY="255.6" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Орловская.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Lipetsk" fitWidth="20.0" layoutX="88.0" layoutY="265.6" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Липецкая.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Tambov" fitWidth="17.6" layoutX="102.0" layoutY="270.4" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Тамбовская.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Pensenskaya" fitWidth="21.2" layoutX="117.0" layoutY="272.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Pensenskaya.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Ylyanovsk" fitWidth="23.7" layoutX="136.5" layoutY="276.2" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Ульяновская.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Tatarstan" fitWidth="41.0" layoutX="143.0" layoutY="266.5" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Татарстан.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Udmurtinskaya" fitWidth="20.7" layoutX="171.3" layoutY="256.6" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Удмуртинская.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Permskii" fitWidth="43.5" layoutX="183.7" layoutY="234.1" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Пермиский.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Comi" fitHeight="68.5" layoutX="171.7" layoutY="176.9" pickOnBounds="true" preserveRatio="true" scaleX="0.996">
+               <image>
+                  <Image url="@Коми.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Nenetskyy" fitWidth="86.0" layoutX="184.0" layoutY="147.2" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Nentskyy.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Archangelsk" fitWidth="66.5" layoutX="135.6" layoutY="164.8" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Архангельский.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Murmansk" fitWidth="46.0" layoutX="136.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Мурманский.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Karelya" fitWidth="48.5" layoutX="101.8" layoutY="134.5" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Karelya.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Leningradskaya" fitWidth="42.4" layoutX="86.0" layoutY="176.4" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Ленинградская.png" />
+               </image>
+            </ImageView>
+            <ImageView fitWidth="8.0" layoutX="96.5" layoutY="186.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Saint_Petersburg.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Vologorodskaya" fitHeight="63.0" fitWidth="60.4" layoutX="111.0" layoutY="193.7" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Волгоградская.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Kirovskaya" fitWidth="43.5" layoutX="153.3" layoutY="223.6" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Кировская.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Smolenskaya" fitHeight="93.0" fitWidth="26.0" layoutX="72.0" layoutY="226.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Смоленская.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Calushskaya" fitHeight="15.0" layoutX="81.0" layoutY="241.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Калужская.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Tulskaya" fitWidth="15.6" layoutX="90.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Тульская.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Razanskaya" fitWidth="24.0" layoutX="101.5" layoutY="254.5" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Рязанская.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Mordoviya" fitWidth="25.8" layoutX="118.5" layoutY="264.5" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Мордовия.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Chuvachskaya" fitWidth="14.0" layoutX="142.0" layoutY="263.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Чувашская.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="MariiAl" fitHeight="14.0" layoutX="145.0" layoutY="255.8" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Мэрий_Эл.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="NishiyGorod" fitHeight="27.5" layoutX="122.0" layoutY="244.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Нижегородская_область.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Kostromskaya" fitWidth="39.5" layoutX="127.0" layoutY="226.5" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Костромская.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Yaroslavskaya" fitWidth="21.3" layoutX="114.5" layoutY="220.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Ярославская.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Tverskaya" fitHeight="30.0" fitWidth="42.0" layoutX="80.0" layoutY="213.5" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Tverskaya.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Novgorod" fitWidth="34.0" layoutX="83.5" layoutY="197.1" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Новгородская.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Pscov" fitWidth="22.0" layoutX="68.5" layoutY="189.5" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Псковская.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Vladimiskaya" fitWidth="20.4" layoutX="112.8" layoutY="239.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Владимирская.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Ivanovskaya" fitHeight="15.0" fitWidth="22.0" layoutX="121.0" layoutY="238.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Ivanonvskaya.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Moskovskaya_obl" fitWidth="23.0" layoutX="94.5" layoutY="233.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Moskovskaya_obl.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Moscow" fitWidth="7.0" layoutX="103.5" layoutY="241.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Moskva.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Kaliningradskaya" fitWidth="14.5" layoutX="26.0" layoutY="192.5" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Калининградская_область.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Alanya" fitWidth="10.0" layoutX="78.0" layoutY="358.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Алания.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</Pane>
