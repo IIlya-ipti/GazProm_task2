@@ -19,7 +19,6 @@ public class Connect {
         markerList.remove(marker);
     }
     public void setWrapper(Wrapper wrapper){
-        System.out.println("vvvv");
         this.wrapper = wrapper;
     }
     public void connect(){
