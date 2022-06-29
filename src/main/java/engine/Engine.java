@@ -10,11 +10,13 @@ import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.TreeSet;
 
 
 public class Engine {
     public static Status status = Status.USER;
-    List<Wrapper> wrapperList = new ArrayList<>();
+    private final List<Wrapper> wrapperList = new ArrayList<>();
+    private final List<Marker> markerArrayList = new ArrayList<>();
 
 
     public Engine(List<Pipe> pipeViews, List<Pair<Marker,Integer>> markerList, Pane pane){
@@ -23,9 +25,14 @@ public class Engine {
             pipeViews.get(i).setIndex(i);
         }
         for(Pair<Marker,Integer> pair : markerList){
+            markerArrayList.add(pair.getKey());
             wrapperList.get(pair.getValue()).connect(pair.getKey());
         }
 
+    }
+
+    public List<Marker> getMarkerArrayList() {
+        return markerArrayList;
     }
 
     public List<Wrapper> getWrapperList() {

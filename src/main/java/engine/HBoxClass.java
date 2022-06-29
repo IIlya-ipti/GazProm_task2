@@ -28,6 +28,9 @@ public class HBoxClass {
         hbox.setScaleY(0.6);
         hbox.setLayoutY(hbox.getLayoutY() - 30);
         hbox.setLayoutX(hbox.getLayoutX() - 60);
+
+        setMouseEvent();
+        off();
     }
     private void setUserPathList(List<UserPath> userPathList){
         for(UserPath userPath: userPathList){

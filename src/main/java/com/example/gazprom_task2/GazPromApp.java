@@ -20,7 +20,7 @@ public class GazPromApp extends Application {
         stage.setFullScreen(true);
         stage.initStyle(StageStyle.UTILITY);
         FXMLLoader fxmlLoader = new FXMLLoader(GazPromApp.class.getResource("Map3.fxml"));
-        Scene scene = new Scene(fxmlLoader.load());
+        Scene scene = new Scene(fxmlLoader.load(),1000,700);
         stage.setScene(scene);
         stage.setFullScreenExitHint("");
         PleaseProvideControllerClassName controllerClassName = fxmlLoader.getController();
@@ -31,15 +31,19 @@ public class GazPromApp extends Application {
             }
             if(t.getCode() == KeyCode.F11){
                 Engine.status = Status.ADMIN;
-                controllerClassName.update(true);
             }
             if(t.getCode() == KeyCode.F10){
                 Engine.status = Status.USER;
-                controllerClassName.update(false);
             }
+            if(t.getCode() == KeyCode.F9){
+                Engine.status = Status.CONNECT;
+            }
+            controllerClassName.update(Engine.status);
         });
+        Engine.status = Status.USER;
         stage.show();
         controllerClassName.afterInit();
+        controllerClassName.update(Engine.status);
 
     }
 

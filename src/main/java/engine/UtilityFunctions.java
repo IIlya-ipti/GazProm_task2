@@ -90,7 +90,7 @@ public class UtilityFunctions {
         int r = (int)(color.getRed()    * 255);
         int g = (int)(color.getGreen()  * 255);
         int b = (int)(color.getBlue()   * 255);
-        return 100 < (r + g + b) && (r + g + b) < 255 * 3 - 40;
+        return 0 < (r + g + b + color.getOpacity());
     }
 
     public static Pair<Point2D,Point2D> getPointCircleLine(Circle circle, Point2D point){

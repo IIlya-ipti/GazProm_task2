@@ -23,6 +23,22 @@
                </opaqueInsets>
             </Button>
             <VBox fx:id="Vbox_list" layoutX="25.0" layoutY="98.0" prefHeight="331.0" prefWidth="272.0" />
+            <Button fx:id="ConnectButton" layoutX="44.0" layoutY="421.0" mnemonicParsing="false" onAction="#ConnectButtonAction" prefHeight="27.0" prefWidth="70.0" style="-fx-border-color: gray; -fx-background-color: transparent; -fx-border-radius: 0;" text="Connect" textAlignment="CENTER">
+               <font>
+                  <Font name="Vivaldi Italic" size="12.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <Button fx:id="DisonnectButton" layoutX="126.0" layoutY="421.0" mnemonicParsing="false" onAction="#DisconnectButtonAction" prefHeight="27.0" prefWidth="78.0" style="-fx-border-color: gray; -fx-background-color: transparent; -fx-border-radius: 0;" text="disconnect" textAlignment="CENTER">
+               <font>
+                  <Font name="Vivaldi Italic" size="12.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
         
          </children>
       </Pane>
