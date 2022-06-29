@@ -13,12 +13,10 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
-import javafx.scene.effect.DropShadow;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
-import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
@@ -328,19 +326,14 @@ public class PleaseProvideControllerClassName implements Initializable {
                 pane
                 );
 
-        Marker marker = new Marker(UserPath.CollegeOne,pane,100,100);
-        engine.getWrapperList().get(0).connect(marker);
+        //Marker marker = new Marker(UserPath.CollegeOne,pane,100,100);
+        //engine.getWrapperList().get(0).connect(marker);
         Vbox_list.getChildren().addAll(
-                getCheckBoxStyle("Сила Сибири"),
-                getCheckBoxStyle("Сила Сибири2"),
-                getCheckBoxStyle("Сила Сибири3")
+                getCheckBox("Сила Сибири"),
+                getCheckBox("Сила Сибири2"),
+                getCheckBox("Сила Сибири3")
                 );
         Vbox_list.setSpacing(30);
-
-
-        //List_val.getItems().addAll("Сила Сибири","Амурскй ГПЗ","...","...","...");
-        //List_val.setFixedCellSize(60);
-        //List_val.setMaxHeight(500);
 
     }
     public void update(boolean admin){
@@ -361,14 +354,12 @@ public class PleaseProvideControllerClassName implements Initializable {
 
         double width = scene.getWidth();
         double height = scene.getHeight();
-
-
         double WIDTH_CONST_AMENDMENT = 20;
-        double WIDTH_CONST  = width/30;
+        double WIDTH_CONST  = width/30;         //  width of one HBox object
+
 
 
         // init HBox (list of images with spacing)
-        hbox.setSpacing(20);
         this.userPathList = List.of(
                 UserPath.CollegeOne,
                 UserPath.CollegeOne,
@@ -382,35 +373,11 @@ public class PleaseProvideControllerClassName implements Initializable {
                 UserPath.CollegeFive,
                 UserPath.CollegeFive
         );
-        for(UserPath userPath: userPathList){
-            hbox.getChildren().add( UserPath.getImageViewSetWidthHeight(userPath,WIDTH_CONST,0,true));
-        }
-        hbox.setOnMouseClicked(mouseEvent -> {
-            int index = (int) (mouseEvent.getX()/(hbox.getWidth()/(hbox.getWidth()/(WIDTH_CONST + 20))));
-            if(index < hbox.getChildren().size()){
-                Node node = hbox.getChildren().get(index);
-                if(mouseEvent.getX() <= node.getBoundsInParent().getMaxX()){
-                    updateHBoxChild(index);
-                    if(indexChild != index) {
-                        deleteHBoxChild(indexChild);
-                        indexChild = index;
-                    }
-                }
-            }
-        });
-        hbox.setScaleX(0.6);
-        hbox.setScaleY(0.6);
-        hbox.setLayoutY(hbox.getLayoutY() - 30);
-        hbox.setLayoutX(hbox.getLayoutX() - 60);
-        indexChild = 0;
-        updateHBoxChild(0);
-        hbox.setDisable(true);
-        hbox.setVisible(false);
+        HBoxClass hBoxClass = new HBoxClass(hbox,userPathList,WIDTH_CONST);
+        hBoxClass.setMouseEvent();
+        hBoxClass.off();
+
         text.setVisible(true);
-        hbox.setStyle("-fx-background-color: white;" +
-                "-fx-effect: dropshadow(gaussian, #788b98, " + 20 + ", 0, 0, 0);" +
-                "-fx-background-insets: " + 5 + ";" +
-                "-fx-background-radius: " + 20);
 
 
 
@@ -441,20 +408,7 @@ public class PleaseProvideControllerClassName implements Initializable {
 
     }
 
-    private void updateHBoxChild(int index){
-        if(index < hbox.getChildren().size()){
-            Node node = hbox.getChildren().get(index);
-            node.setEffect(new DropShadow(30, Color.DODGERBLUE));
-            Marker.actualUserPath = userPathList.get(index);
-        }
-    }
-    private void deleteHBoxChild(int index){
-        if(index < hbox.getChildren().size()){
-            Node node = hbox.getChildren().get(index);
-            node.setEffect(null);
-        }
-    }
-    private Node getCheckBoxStyle(String val){
+    private Node getCheckBox(String val){
         CheckBox checkBox = new CheckBox(val);
         checkBox.getStylesheets().add(String.valueOf(getClass().getResource("/styles.css")));
         checkBox.setFont(Font.font("times new roman", FontWeight.BOLD, FontPosture.REGULAR, 20));
