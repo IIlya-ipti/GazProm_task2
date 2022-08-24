@@ -2,6 +2,9 @@ package parser;
 
 import engine.UserPath;
 
+/**
+ * this class contains all information of config file
+ * */
 public class Config {
     public String name;
     public double[][] coords;
