@@ -49,6 +49,9 @@ public class Pipe implements ConnectedObject,Animation{
         listsOfLines.add(arrayList);
         addPointLine(arrayList, doubleList);
     }
+    /**
+     * add new point at line
+     * */
     public void addLine(int index, double... doubleList){
         if(index == -1){
             index = listsOfLines.size() - 1;
@@ -61,6 +64,9 @@ public class Pipe implements ConnectedObject,Animation{
         }
     }
 
+    /**
+     * add new lines of doublelist (connect points) to arraylist
+     * */
     private void addPointLine(List<Line> arrayList, double[] doubleList) {
         Circle circleStart = new Circle(doubleList[0],doubleList[1],2);
         Circle circleEnd = new Circle(doubleList[doubleList.length - 2],doubleList[doubleList.length - 1],2);
@@ -82,6 +88,9 @@ public class Pipe implements ConnectedObject,Animation{
         }
     }
 
+    /**
+     * add new point to last line
+     * */
     public void addPoint(double x, double y){
         if(endX != -1) {
             addLine(-1,endX, endY, x, y);
@@ -94,17 +103,10 @@ public class Pipe implements ConnectedObject,Animation{
             paneParent.getChildren().add(circle);
         }
     }
-    public void addPointNewLine(double x, double y){
-        if(endX != -1) {
-            addLine(endX, endY, x, y);
-        }else{
-            endX = x;
-            endY = y;
-            Circle circle = new Circle(endX,endY,2);
-            nodesList.add(circle);
-            paneParent.getChildren().add(circle);
-        }
-    }
+
+    /**
+     * to add points to new line
+     * */
     public void reset(){
         endY = -1;
         endX = -1;
@@ -178,7 +180,7 @@ public class Pipe implements ConnectedObject,Animation{
         }
     }
 
-
+    @Override
     public void on(){
         for(Node node : nodesList){
             node.setVisible(true);
@@ -194,6 +196,8 @@ public class Pipe implements ConnectedObject,Animation{
             }
         }
     }
+
+    @Override
     public void off(){
         for(Node node : nodesList){
             node.setVisible(false);
