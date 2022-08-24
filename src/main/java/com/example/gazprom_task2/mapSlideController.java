@@ -36,7 +36,6 @@ public class mapSlideController implements Initializable {
     }
 
 
-
     @FXML
     private Pane paneMap;
 
