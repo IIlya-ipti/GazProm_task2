@@ -50,6 +50,9 @@ public class mapSlideController implements Initializable {
 
     private VboxList pipeList;
 
+    /**
+     * press exit button action
+     * */
     @FXML
     void ExitAction(ActionEvent event) {
         ((Stage)paneMap.getScene().getWindow()).close();
@@ -70,8 +73,11 @@ public class mapSlideController implements Initializable {
         }
     }
 
+    /**
+     * shotPlan button (and long plan)
+     * */
     @FXML
-    void DynamicAction(ActionEvent event) throws IOException {
+    void shortPlanAction(ActionEvent event) {
         first.setVisible(false);
         first.setDisable(true);
         second.setVisible(true);
@@ -134,6 +140,9 @@ public class mapSlideController implements Initializable {
         }
     }
 
+    /**
+     * update map node after set new bounds (scene bounds)
+     * */
     void update(Scene scene){
 
         double width = scene.getWidth();

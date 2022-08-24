@@ -435,7 +435,7 @@
                   </ImageView>
                </children>
             </Pane>
-            <Button id="Button" fx:id="shortPlan" layoutX="24.0" layoutY="398.0" mnemonicParsing="false" onAction="#DynamicAction" prefHeight="15.0" prefWidth="321.0" style="-fx-background-insets: 0,2,2,0,0,1,2;" stylesheets="@../../../styles.css" text="Краткосрочное планирование">
+            <Button id="Button" fx:id="shortPlan" layoutX="24.0" layoutY="398.0" mnemonicParsing="false" onAction="#shortPlanAction" prefHeight="15.0" prefWidth="321.0" style="-fx-background-insets: 0,2,2,0,0,1,2;" stylesheets="@../../../styles.css" text="Краткосрочное планирование">
                <font>
                   <Font name="Times New Roman" size="7.0" />
                </font>
@@ -443,7 +443,7 @@
                   <Insets />
                </opaqueInsets>
             </Button>
-            <Button id="Button" fx:id="longPlan" layoutX="388.0" layoutY="398.0" mnemonicParsing="false" onAction="#DynamicAction" prefHeight="15.0" prefWidth="321.0" style="-fx-background-insets: 0,2,2,0,0,1,2;" stylesheets="@../../../styles.css" text="Долгосрочное планирование">
+            <Button id="Button" fx:id="longPlan" layoutX="388.0" layoutY="398.0" mnemonicParsing="false" onAction="#shortPlanAction" prefHeight="15.0" prefWidth="321.0" style="-fx-background-insets: 0,2,2,0,0,1,2;" stylesheets="@../../../styles.css" text="Долгосрочное планирование">
                <font>
                   <Font name="Times New Roman" size="7.0" />
                </font>
