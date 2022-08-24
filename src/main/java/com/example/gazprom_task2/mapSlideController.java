@@ -54,7 +54,7 @@ public class mapSlideController implements Initializable {
      * press exit button action
      * */
     @FXML
-    void ExitAction(ActionEvent event) {
+    private void ExitAction(ActionEvent event) {
         ((Stage)paneMap.getScene().getWindow()).close();
         StringBuilder vl = new StringBuilder("");
         for(Pipe pipe : pipes){
@@ -77,7 +77,7 @@ public class mapSlideController implements Initializable {
      * shotPlan button (and long plan)
      * */
     @FXML
-    void shortPlanAction(ActionEvent event) {
+    private void shortPlanAction(ActionEvent event) {
         first.setVisible(false);
         first.setDisable(true);
         second.setVisible(true);
@@ -143,7 +143,7 @@ public class mapSlideController implements Initializable {
     /**
      * update map node after set new bounds (scene bounds)
      * */
-    void update(Scene scene){
+    public void update(Scene scene){
 
         double width = scene.getWidth();
         double height = scene.getHeight();

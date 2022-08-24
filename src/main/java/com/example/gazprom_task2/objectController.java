@@ -1,7 +1,6 @@
 package com.example.gazprom_task2;
 
 import engine.Engine;
-import javafx.animation.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -18,14 +17,9 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class objectController implements Initializable {
-    private Timeline startInfoTimeline;
-    private Timeline endInfoTimeline;
-    private Timeline startPumpAnimation;
-    private Timeline endPumpAnimation;
     private Engine engine;
     public Parent first;
     public Parent second;
-    private boolean infoAct = false;
 
     public void setNextScene(Parent one, Parent two){
         this.first = one;
@@ -35,19 +29,23 @@ public class objectController implements Initializable {
     @FXML
     private Button Exit;
 
+    /**
+     * list of years (for choice)
+     * */
     @FXML
     private ComboBox<String> yearID;
 
+    /**
+     * prime parent node with exit button
+     * */
     @FXML
-    public void ExitAction(ActionEvent actionEvent) {
-        ((Stage)Exit.getScene().getWindow()).close();
-    }
+    private Pane paneWith;
 
+    /**
+     * prime parent node without exit button
+     * */
     @FXML
-    private Pane TotalPane;
-
-    @FXML
-    private Pane PANE;
+    private Pane paneNoWith;
 
     @FXML
     private TextField MG;
@@ -59,12 +57,6 @@ public class objectController implements Initializable {
     private TextField GRC;
 
     @FXML
-    private VBox post;
-
-    @FXML
-    private TextFlow id;
-
-    @FXML
     private Text employeesID;
 
     @FXML
@@ -72,9 +64,6 @@ public class objectController implements Initializable {
 
     @FXML
     private Text managersPost;
-
-    @FXML
-    private ScrollPane AAA;
 
     @FXML
     private Text managersID;
@@ -100,20 +89,44 @@ public class objectController implements Initializable {
     @FXML
     private Pane emplyeers;
 
+    /**
+     * professional standard code table
+     * */
     @FXML
     private VBox ID;
 
+    /**
+     * List of positions or professions
+     * */
+    @FXML
+    private VBox post;
+
+    /**
+     * table information
+     * */
     @FXML
     private Pane info;
 
+    /**
+     * button for calculate
+     * */
     @FXML
     private Button score;
+
+
+    /**
+     * press exit button
+     * */
+    @FXML
+    public void ExitAction(ActionEvent actionEvent) {
+        ((Stage)Exit.getScene().getWindow()).close();
+    }
 
     /**
      * -500 MG
      * */
     @FXML
-    void _500_action_first(ActionEvent event) {
+    private void _500_action_first(ActionEvent event) {
         MG.setText(String.valueOf(Math.max(Double.parseDouble(MG.getText()) - 500, 0)));
     }
 
@@ -121,15 +134,15 @@ public class objectController implements Initializable {
      * +500 NG
      * */
     @FXML
-    void ___500_action_first(ActionEvent event) {
+    private void ___500_action_first(ActionEvent event) {
         MG.setText(String.valueOf(Double.parseDouble(MG.getText()) + 500));
     }
 
     /**
-     * -1 GRC
+     * -1 GRA
      * */
     @FXML
-    void _1_action_second(ActionEvent event) {
+    private void _1_action_second(ActionEvent event) {
         GPA.setText(String.valueOf(Math.max(Integer.parseInt(GPA.getText()) - 1, 0)));
     }
 
@@ -137,7 +150,7 @@ public class objectController implements Initializable {
      * +1 GRA
      * */
     @FXML
-    void __1_action_second(ActionEvent event) {
+    private void __1_action_second(ActionEvent event) {
         GPA.setText(String.valueOf(Integer.parseInt(GPA.getText()) + 1));
 
     }
@@ -146,7 +159,7 @@ public class objectController implements Initializable {
      * -1 GRC
      * */
     @FXML
-    void _1_action_third(ActionEvent event) {
+    private void _1_action_third(ActionEvent event) {
         GRC.setText(String.valueOf(Math.max(Integer.parseInt(GRC.getText()) - 1, 0)));
     }
 
@@ -154,7 +167,7 @@ public class objectController implements Initializable {
      * +1 GRC
      * */
     @FXML
-    void __1_action_third(ActionEvent event) {
+    private void __1_action_third(ActionEvent event) {
         GRC.setText(String.valueOf(Integer.parseInt(GRC.getText()) + 1));
     }
 
@@ -163,7 +176,7 @@ public class objectController implements Initializable {
      * come back
      * */
     @FXML
-    void returnAct(ActionEvent event) {
+    private void returnAct(ActionEvent event) {
         first.setVisible(true);
         first.setDisable(false);
         second.setVisible(false);
@@ -174,7 +187,7 @@ public class objectController implements Initializable {
      * calculate table
      * */
     @FXML
-    void calculationOn(ActionEvent event) {
+    private void calculationOn(ActionEvent event) {
         engine.update(yearID.getValue(),
                 Double.parseDouble(MG.getText()),
                 Integer.parseInt(GPA.getText()),
@@ -186,7 +199,7 @@ public class objectController implements Initializable {
      *  print (table) information of employers
      * */
     @FXML
-    void employers_act(MouseEvent event) {
+    private void employers_act(MouseEvent event) {
         engine.updateVals(employeesPost);
         engine.updateID(employeesID);
     }
@@ -195,7 +208,7 @@ public class objectController implements Initializable {
      *  print (table) information of managers
      * */
     @FXML
-    void managers_act(MouseEvent event) {
+    private void managers_act(MouseEvent event) {
         engine.updateVals(managersPost);
         engine.updateID(managersID);
     }
@@ -204,7 +217,7 @@ public class objectController implements Initializable {
      *  print (table) information of workers
      * */
     @FXML
-    void workers_act(MouseEvent event) {
+    private void workers_act(MouseEvent event) {
         engine.updateVals(workersPost);
         engine.updateID(workersID);
     }
@@ -220,7 +233,7 @@ public class objectController implements Initializable {
         yearID.getItems().add("2026");
         yearID.setStyle("-fx-font-family: 'Times New Roman'; -fx-font-size: 14;");
         engine = new Engine(employeesPost,employeesID,workersPost,workersID,managersPost,managersID,totalPost,
-                totalID,post,ID,id);
+                totalID,post,ID);
         afterInit();
 
     }
@@ -228,8 +241,8 @@ public class objectController implements Initializable {
     private void afterInit() {
     }
 
-    void update(Scene scene){
-        Pane pane = PANE;
+    public void update(Scene scene){
+        Pane pane = paneNoWith;
 
         double width = scene.getWidth();
         double height = scene.getHeight();
@@ -249,7 +262,8 @@ public class objectController implements Initializable {
         );
 
     }
-    void setData(String Data){
+
+    void setYear(String Data){
         int index = yearID.getItems().indexOf(Data);
         if(index == -1){
             yearID.getItems().add(Data);

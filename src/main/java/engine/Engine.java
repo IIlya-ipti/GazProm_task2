@@ -1,18 +1,9 @@
 package engine;
 
 
-import javafx.animation.Interpolator;
-import javafx.animation.KeyFrame;
-import javafx.animation.KeyValue;
-import javafx.animation.Timeline;
-import javafx.geometry.Bounds;
-import javafx.scene.image.ImageView;
-import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
-import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
-import javafx.util.Duration;
 import javafx.util.Pair;
 
 import java.util.ArrayList;
@@ -38,7 +29,6 @@ public final class Engine {
     private final Text total_id;
     private final VBox post;
     private final VBox ID;
-    private final TextFlow id;
     private final List<Pair<String,String>> workers_post_id_list = new ArrayList<>();
     private final List<Pair<String,String>> managers_post_id_list = new ArrayList<>();
     private final List<Pair<String,String>> employees_post_id_list = new ArrayList<>();
@@ -47,7 +37,7 @@ public final class Engine {
     public Engine(Text employees_post, Text employees_id,
                   Text workers_post, Text workers_id,
                   Text managers_post, Text managers_id,
-                  Text total_post, Text total_id, VBox post,VBox ID,TextFlow id) {
+                  Text total_post, Text total_id, VBox post, VBox ID) {
         this.employees_post = employees_post;
         this.employees_id = employees_id;
         this.workers_post = workers_post;
@@ -57,7 +47,6 @@ public final class Engine {
         this.total_post = total_post;
         this.total_id = total_id;
         this.post = post;
-        this.id = id;
         this.ID = ID;
 
     }

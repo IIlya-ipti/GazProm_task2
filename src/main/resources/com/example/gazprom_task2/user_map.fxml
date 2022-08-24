@@ -14,9 +14,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane fx:id="TotalPane" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gazprom_task2.objectController">
+<Pane fx:id="paneWith" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gazprom_task2.objectController">
    <children>
-      <Pane fx:id="PANE" prefHeight="420.0" prefWidth="733.0">
+      <Pane fx:id="paneNoWith" prefHeight="420.0" prefWidth="733.0">
          <children>
             <Pane fx:id="pane" prefHeight="397.0" prefWidth="733.0">
                <children>
