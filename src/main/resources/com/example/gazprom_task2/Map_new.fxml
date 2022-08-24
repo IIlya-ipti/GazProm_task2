@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
-<HBox xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gazprom_task2.FirstController">
+<HBox xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gazprom_task2.mapSlideController">
    <children>
       <Pane fx:id="Total" prefHeight="462.0" prefWidth="741.0">
          <children>

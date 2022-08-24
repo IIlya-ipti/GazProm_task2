@@ -7,11 +7,11 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane prefHeight="418.0" prefWidth="733.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gazprom_task2.FirstController">
+<Pane prefHeight="418.0" prefWidth="733.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gazprom_task2.mapSlideController">
    <children>
-      <Pane fx:id="Pane_first" layoutY="14.0" prefHeight="417.0" prefWidth="733.0">
+      <Pane fx:id="parentPane" layoutY="14.0" prefHeight="417.0" prefWidth="733.0">
          <children>
-            <Pane fx:id="pane" prefHeight="373.0" prefWidth="733.0">
+            <Pane fx:id="paneMap" prefHeight="373.0" prefWidth="733.0">
                <children>
                   <ImageView fx:id="Irkutsk" fitWidth="109.0" layoutX="395.0" layoutY="222.0" pickOnBounds="true" preserveRatio="true">
                      <image>

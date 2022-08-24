@@ -1,7 +1,6 @@
 package com.example.gazprom_task2;
 
 import engine.Engine;
-import engine.UtilityFunctions;
 import javafx.animation.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -9,27 +8,16 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
-import javafx.scene.paint.Color;
-import javafx.scene.paint.Paint;
-import javafx.scene.shape.LineTo;
-import javafx.scene.shape.MoveTo;
-import javafx.scene.shape.Path;
-import javafx.scene.shape.Rectangle;
 import javafx.scene.text.*;
 import javafx.stage.Stage;
-import javafx.util.Duration;
-import javafx.util.Pair;
 
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.ResourceBundle;
 
-public class HelloController implements Initializable {
+public class objectController implements Initializable {
     private Timeline startInfoTimeline;
     private Timeline endInfoTimeline;
     private Timeline startPumpAnimation;
@@ -45,265 +33,7 @@ public class HelloController implements Initializable {
     }
 
     @FXML
-    private ImageView Adugaia;
-
-    @FXML
-    private ImageView Alanya;
-
-    @FXML
-    private ImageView Altay;
-
-    @FXML
-    private ImageView Altayskii;
-
-    @FXML
-    private ImageView Amurskaya;
-
-    @FXML
-    private ImageView Archangelsk;
-
-    @FXML
-    private ImageView Astrahanskaya;
-
-    @FXML
-    private ImageView Bashkortostan;
-
-    @FXML
-    private ImageView Belgorodskaya;
-
-    @FXML
-    private ImageView Branskaya;
-
-    @FXML
-    private ImageView Buratya;
-
-    @FXML
-    private ImageView Cabardin;
-
-    @FXML
-    private ImageView Cahalin;
-
-    @FXML
-    private ImageView Calushskaya;
-
-    @FXML
-    private ImageView Camchatka;
-
-    @FXML
-    private ImageView Chechenskaya;
-
-    @FXML
-    private ImageView Chelubinsk;
-
-    @FXML
-    private ImageView Cherkesia;
-
-    @FXML
-    private ImageView Chukotskyy;
-
-    @FXML
-    private ImageView Chuvachskaya;
-
-    @FXML
-    private ImageView Comi;
-
-    @FXML
-    private ImageView Dagestan;
-
-    @FXML
-    private ImageView Evreyskii;
-
-    @FXML
     private Button Exit;
-
-    @FXML
-    private ImageView Habarovsk;
-
-    @FXML
-    private ImageView Hakasya;
-
-    @FXML
-    private ImageView Hantu;
-
-    @FXML
-    private ImageView Ingushatya;
-
-    @FXML
-    private ImageView Irkutsk;
-
-    @FXML
-    private ImageView Ivanovskaya;
-
-    @FXML
-    private ImageView Kaliningradskaya;
-
-    @FXML
-    private ImageView Kalmukuya;
-
-    @FXML
-    private ImageView Karelya;
-
-    @FXML
-    private ImageView Kemerovskaya;
-
-    @FXML
-    private ImageView Kirovskaya;
-
-    @FXML
-    private ImageView Kostromskaya;
-
-    @FXML
-    private ImageView Krasnodarskyy;
-
-    @FXML
-    private ImageView Krasnor_kray;
-
-    @FXML
-    private ImageView Krum;
-
-    @FXML
-    private ImageView Kurganskaya;
-
-    @FXML
-    private ImageView Kurskaya;
-
-    @FXML
-    private ImageView Leningradskaya;
-
-    @FXML
-    private ImageView Lipetsk;
-
-    @FXML
-    private ImageView Magadan;
-
-    @FXML
-    private ImageView MariiAl;
-
-    @FXML
-    private ImageView Mordoviya;
-
-    @FXML
-    private ImageView Moscow;
-
-    @FXML
-    private ImageView Moskovskaya_obl;
-
-    @FXML
-    private ImageView Murmansk;
-
-    @FXML
-    private ImageView Nenetskyy;
-
-    @FXML
-    private ImageView NishiyGorod;
-
-    @FXML
-    private ImageView Novgorod;
-
-    @FXML
-    private ImageView Novosibirsk;
-
-    @FXML
-    private ImageView Omskaya;
-
-    @FXML
-    private ImageView Orenburg;
-
-    @FXML
-    private ImageView Orlovskaya;
-
-    @FXML
-    private ImageView Pensenskaya;
-
-    @FXML
-    private ImageView Permskii;
-
-    @FXML
-    private ImageView Primorsky;
-
-    @FXML
-    private ImageView Pscov;
-
-    @FXML
-    private ImageView Razanskaya;
-
-    @FXML
-    private ImageView Rostov;
-
-    @FXML
-    private ImageView Sainkt_petersburg;
-
-    @FXML
-    private ImageView Samarskaya;
-
-    @FXML
-    private ImageView Saratovskaya;
-
-    @FXML
-    private ImageView Smolenskaya;
-
-    @FXML
-    private ImageView Stavropol;
-
-    @FXML
-    private ImageView Sverdlovskaya;
-
-    @FXML
-    private ImageView Tambov;
-
-    @FXML
-    private ImageView Tatarstan;
-
-    @FXML
-    private TextFlow TextField;
-
-    @FXML
-    private ImageView Tomskaya;
-
-    @FXML
-    private ImageView Tulskaya;
-
-    @FXML
-    private ImageView Tumenskaya;
-
-    @FXML
-    private ImageView Tuva;
-
-    @FXML
-    private ImageView Tverskaya;
-
-    @FXML
-    private ImageView Udmurtinskaya;
-
-    @FXML
-    private ImageView Vladimiskaya;
-
-    @FXML
-    private ImageView Volgogradskaya;
-
-    @FXML
-    private ImageView Vologorodskaya;
-
-    @FXML
-    private ImageView Voroneg;
-
-    @FXML
-    private ImageView Yakutia;
-
-    @FXML
-    private ImageView Yamal_Nenezkiy;
-
-    @FXML
-    private ImageView Yaroslavskaya;
-
-    @FXML
-    private ImageView Ylyanovsk;
-
-    @FXML
-    private ImageView Zabaykal;
-
-    @FXML
-    private Pane pane;
 
     @FXML
     private ComboBox<String> yearID;
@@ -376,42 +106,62 @@ public class HelloController implements Initializable {
     @FXML
     private Pane info;
 
-
-
     @FXML
     private Button score;
 
+    /**
+     * -500 MG
+     * */
     @FXML
     void _500_action_first(ActionEvent event) {
         MG.setText(String.valueOf(Math.max(Double.parseDouble(MG.getText()) - 500, 0)));
     }
 
+    /**
+     * +500 NG
+     * */
     @FXML
     void ___500_action_first(ActionEvent event) {
         MG.setText(String.valueOf(Double.parseDouble(MG.getText()) + 500));
     }
 
+    /**
+     * -1 GRC
+     * */
     @FXML
     void _1_action_second(ActionEvent event) {
         GPA.setText(String.valueOf(Math.max(Integer.parseInt(GPA.getText()) - 1, 0)));
     }
 
+    /**
+     * +1 GRA
+     * */
     @FXML
     void __1_action_second(ActionEvent event) {
         GPA.setText(String.valueOf(Integer.parseInt(GPA.getText()) + 1));
 
     }
 
+    /**
+     * -1 GRC
+     * */
     @FXML
     void _1_action_third(ActionEvent event) {
         GRC.setText(String.valueOf(Math.max(Integer.parseInt(GRC.getText()) - 1, 0)));
     }
 
+    /**
+     * +1 GRC
+     * */
     @FXML
     void __1_action_third(ActionEvent event) {
         GRC.setText(String.valueOf(Integer.parseInt(GRC.getText()) + 1));
     }
 
+
+    /**
+     * come back
+     * */
     @FXML
     void returnAct(ActionEvent event) {
         first.setVisible(true);
@@ -420,6 +170,9 @@ public class HelloController implements Initializable {
         second.setDisable(true);
     }
 
+    /**
+     * calculate table
+     * */
     @FXML
     void calculationOn(ActionEvent event) {
         engine.update(yearID.getValue(),
@@ -429,29 +182,36 @@ public class HelloController implements Initializable {
                 true);
     }
 
+    /**
+     *  print (table) information of employers
+     * */
     @FXML
     void employers_act(MouseEvent event) {
         engine.updateVals(employeesPost);
         engine.updateID(employeesID);
     }
 
+    /**
+     *  print (table) information of managers
+     * */
     @FXML
     void managers_act(MouseEvent event) {
         engine.updateVals(managersPost);
         engine.updateID(managersID);
     }
 
+    /**
+     *  print (table) information of workers
+     * */
     @FXML
     void workers_act(MouseEvent event) {
         engine.updateVals(workersPost);
         engine.updateID(workersID);
     }
 
-
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        //AAA.setContent(post);
+        // set of list years (for choice)
         yearID.getItems().add("2021");
         yearID.getItems().add("2022");
         yearID.getItems().add("2023");
@@ -461,20 +221,15 @@ public class HelloController implements Initializable {
         yearID.setStyle("-fx-font-family: 'Times New Roman'; -fx-font-size: 14;");
         engine = new Engine(employeesPost,employeesID,workersPost,workersID,managersPost,managersID,totalPost,
                 totalID,post,ID,id);
-
-
         afterInit();
 
     }
 
     private void afterInit() {
-
-
-
     }
+
     void update(Scene scene){
         Pane pane = PANE;
-
 
         double width = scene.getWidth();
         double height = scene.getHeight();
@@ -492,8 +247,6 @@ public class HelloController implements Initializable {
         pane.setTranslateY((pane.getPrefHeight() * coeff - pane.getPrefHeight())/2
                 + (height - (pane.getPrefHeight())* coeff)/2
         );
-
-
 
     }
     void setData(String Data){

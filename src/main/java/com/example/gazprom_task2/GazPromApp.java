@@ -16,51 +16,45 @@ import java.io.IOException;
 public class GazPromApp extends Application {
     @Override
     public void start(Stage stage) throws IOException, InterruptedException {
-
-
+        // delete prompt
         stage.setFullScreenExitHint("");
-        stage.initStyle(StageStyle.TRANSPARENT);
-        stage.initStyle(StageStyle.UNDECORATED);
+
+        // do not show in taskbar
         stage.initStyle(StageStyle.UTILITY);
 
+        //
+        FXMLLoader fxmlLoader =  new FXMLLoader(mapSlideController.class.getResource("Map_one_one_copy.fxml"));
+        FXMLLoader fxmlLoader_ = new FXMLLoader(objectController.class.getResource("user_map.fxml"));
 
-
-
-        FXMLLoader fxmlLoader =  new FXMLLoader(FirstController.class.getResource("Map_one_one_copy.fxml"));
-        FXMLLoader fxmlLoader_ = new FXMLLoader(HelloController.class.getResource("user_map.fxml"));
-
+        // load fxml and control classes
         Parent page_one = fxmlLoader.load();
         Parent page_two = fxmlLoader_.load();
 
 
+        mapSlideController controller =    fxmlLoader.getController();
+        objectController controller1 =   fxmlLoader_.getController();
 
-        FirstController controller =    fxmlLoader.getController();
-        HelloController controller1 =   fxmlLoader_.getController();
+        // to switch between slides
+        controller.setNextScene(page_one,page_two);
+        controller1.setNextScene(page_one,page_two);
 
-        controller.setNextScene(page_one,page_two,controller1);
-        controller1.setNextScene(page_one,page_two );
+        // for invisible interactions
         Pane vBox = new Pane(page_two,page_one);
+
+        // set bound for scene
         Rectangle2D primaryScreenBounds = Screen.getPrimary().getBounds();
         Scene scene = new Scene(vBox,primaryScreenBounds.getWidth(), primaryScreenBounds.getHeight(),null);
+
         page_two.setVisible(false);
         page_two.setDisable(true);
+
         stage.setScene(scene);
+
         controller.update(scene);
         controller1.update(scene);
-        stage.show();
 
-        /*ImageView imageView = UserPath.getImageViewSetWidthHeight(
-                UserPath.GAZ_PROM,500,500,true
-        );
-        Group group = new Group(imageView);
-        imageView.setTranslateX((primaryScreenBounds.getWidth() - imageView.getFitWidth())/2);
-        imageView.setTranslateY((primaryScreenBounds.getHeight() - imageView.getFitHeight())/2);
-
-*/
-        /*scene.setRoot(group);*/
         stage.setFullScreen(false);
-
-        scene.setRoot(vBox);
+        stage.show();
     }
 
     public static void main(String[] args) {
