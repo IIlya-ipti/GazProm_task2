@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.List;
 
 
-public class Pipe implements ConnectedObject{
+public class Pipe implements ConnectedObject,Animation{
     private final HashMap<ConnectedObject, Connect> connectedObjectConnectHashMap = new HashMap<>();
 
     // all lines of pipe
@@ -206,6 +206,12 @@ public class Pipe implements ConnectedObject{
                 line.setDisable(true);
             }
         }
+    }
+
+    @Deprecated
+    @Override
+    public boolean isActive() {
+        return false;
     }
 
     public List<Line> getAllLines(){
