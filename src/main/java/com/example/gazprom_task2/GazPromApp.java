@@ -1,11 +1,12 @@
 package com.example.gazprom_task2;
 
-import engine.*;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Rectangle2D;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyEvent;
+import javafx.scene.layout.Pane;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -14,37 +15,52 @@ import java.io.IOException;
 
 public class GazPromApp extends Application {
     @Override
-    public void start(Stage stage) throws IOException {
+    public void start(Stage stage) throws IOException, InterruptedException {
 
-        // settings
-        stage.setFullScreen(true);
-        stage.initStyle(StageStyle.UTILITY);
-        FXMLLoader fxmlLoader = new FXMLLoader(GazPromApp.class.getResource("Map3.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(),1000,700);
-        stage.setScene(scene);
+
         stage.setFullScreenExitHint("");
-        PleaseProvideControllerClassName controllerClassName = fxmlLoader.getController();
-        scene.addEventHandler(KeyEvent.KEY_PRESSED, t -> {
-            if(t.getCode()== KeyCode.ESCAPE)
-            {
-                stage.close();
-            }
-            if(t.getCode() == KeyCode.F11){
-                Engine.status = Status.ADMIN;
-            }
-            if(t.getCode() == KeyCode.F10){
-                Engine.status = Status.USER;
-            }
-            if(t.getCode() == KeyCode.F9){
-                Engine.status = Status.CONNECT;
-            }
-            controllerClassName.update(Engine.status);
-        });
-        Engine.status = Status.USER;
-        stage.show();
-        controllerClassName.afterInit();
-        controllerClassName.update(Engine.status);
+        stage.initStyle(StageStyle.TRANSPARENT);
+        stage.initStyle(StageStyle.UNDECORATED);
+        stage.initStyle(StageStyle.UTILITY);
 
+
+
+
+        FXMLLoader fxmlLoader =  new FXMLLoader(FirstController.class.getResource("Map_one_one_copy.fxml"));
+        FXMLLoader fxmlLoader_ = new FXMLLoader(HelloController.class.getResource("user_map.fxml"));
+
+        Parent page_one = fxmlLoader.load();
+        Parent page_two = fxmlLoader_.load();
+
+
+
+        FirstController controller =    fxmlLoader.getController();
+        HelloController controller1 =   fxmlLoader_.getController();
+
+        controller.setNextScene(page_one,page_two,controller1);
+        controller1.setNextScene(page_one,page_two );
+        Pane vBox = new Pane(page_two,page_one);
+        Rectangle2D primaryScreenBounds = Screen.getPrimary().getBounds();
+        Scene scene = new Scene(vBox,primaryScreenBounds.getWidth(), primaryScreenBounds.getHeight(),null);
+        page_two.setVisible(false);
+        page_two.setDisable(true);
+        stage.setScene(scene);
+        controller.update(scene);
+        controller1.update(scene);
+        stage.show();
+
+        /*ImageView imageView = UserPath.getImageViewSetWidthHeight(
+                UserPath.GAZ_PROM,500,500,true
+        );
+        Group group = new Group(imageView);
+        imageView.setTranslateX((primaryScreenBounds.getWidth() - imageView.getFitWidth())/2);
+        imageView.setTranslateY((primaryScreenBounds.getHeight() - imageView.getFitHeight())/2);
+
+*/
+        /*scene.setRoot(group);*/
+        stage.setFullScreen(false);
+
+        scene.setRoot(vBox);
     }
 
     public static void main(String[] args) {

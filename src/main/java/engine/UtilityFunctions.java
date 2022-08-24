@@ -4,17 +4,22 @@ import javafx.geometry.Bounds;
 import javafx.geometry.Point2D;
 import javafx.scene.Node;
 import javafx.scene.image.*;
+import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
-import javafx.scene.robot.Robot;
 import javafx.scene.shape.Circle;
+import javafx.scene.shape.Ellipse;
+import javafx.scene.shape.Line;
 import javafx.util.Pair;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class UtilityFunctions {
     static final int delta = 30;
-
+    /**
+     * update color
+     * */
     public static void reColor(ImageView input){
         Image inputImage = input.getImage();
 
@@ -51,6 +56,9 @@ public class UtilityFunctions {
 
         input.setImage(writableImage);
     }
+    /**
+     * get coeff of scale
+     * */
     public static double getCoefficient(ImageView imageView){
         Image originalImage = imageView.getImage();
 
@@ -92,6 +100,7 @@ public class UtilityFunctions {
         int b = (int)(color.getBlue()   * 255);
         return 0 < (r + g + b + color.getOpacity());
     }
+
 
     public static Pair<Point2D,Point2D> getPointCircleLine(Circle circle, Point2D point){
         double xc = circle.getLayoutX();
@@ -147,6 +156,13 @@ public class UtilityFunctions {
         return point2DList;
     }
 
+    public static List<Point2D> getPipePointsList(List<ImageView> imageViews){
+        List<Point2D> point2DList = new ArrayList<>();
+        for(ImageView imageView : imageViews){
+            point2DList.addAll(getPipePointsList(imageView));
+        }
+        return point2DList;
+    }
 
     public static Point2D getMinPoint(Point2D point2D, ImageView imageView){
         List<Point2D> point2DList = getPipePointsList(imageView);
@@ -158,7 +174,9 @@ public class UtilityFunctions {
 
 
 
-
+    /**
+     * the closest point from the array (pipePoints) to the point (point2D)
+     * */
     private static Point2D getPoint2D(Point2D point2D, List<Point2D> pipePoints) {
         Point2D min = null;
         double dist = -1;
@@ -170,7 +188,148 @@ public class UtilityFunctions {
                 min = point;
             }
         }
-        System.out.println(min);
         return min;
     }
+
+    /**
+     * get list points (borders points) of pane
+     * */
+    public static List<Point2D> getPointListPane(Pane pane){
+        double minX = pane.getLayoutX();
+        double maxX = minX + pane.getPrefWidth();
+        double minY = pane.getLayoutY();
+        double maxY = minY + pane.getPrefHeight();
+        List<Point2D> point2DList = new ArrayList<>();
+        for(; minX <= maxX;++minX){
+            for(double Y = minY; Y <= maxY;++Y){
+                point2DList.add(new Point2D(minX,Y));
+            }
+        }
+        return point2DList;
+    }
+
+    /**
+     * get median point (>minY && <maxY) of point2DList
+     * */
+    public static Point2D medianPoint(List<Point2D> point2DList, double minY, double maxY){
+        point2DList.sort(Comparator.comparingDouble(Point2D::getY));
+        double MY = point2DList.get(point2DList.size() - 1).getY();
+        double mY = point2DList.get(0).getY();
+        for (Point2D point2D : point2DList) {
+            if (point2D.getY() > minY && point2D.getY() >= (mY + MY)/2) {
+                if(maxY >= 0 && point2D.getY() > maxY) {
+                    return new Point2D(point2D.getX(),maxY - 30);
+                }else{
+                    return point2D;
+                }
+            }
+        }
+        return null;
+    }
+    public static Point2D getMenuPoint(List<Point2D> point2DList, Bounds bounds, Bounds clip){
+        double width = bounds.getWidth();
+        double height = bounds.getHeight();
+        double clip_width = clip.getWidth();
+        double clip_height = clip.getHeight();
+
+        Point2D point2D = medianPoint(point2DList,height,clip_height - width);
+        assert point2D != null;
+        return new Point2D(point2D.getX() + clip_width * 0.05, point2D.getY() - clip_height* 0.05);
+    }
+
+    /**
+     * points2DList - points of pipe
+     * get point to set Layout menu
+     *
+     * prefWidth - width of menu
+     * prefHeight - height of menu
+     *
+     * clip - bound of parent
+     * */
+    public static Point2D getMenuPoint(List<Point2D> point2DList, double prefWidth, double prefHeight, Bounds clip){
+
+        double clip_width = clip.getWidth();
+        double clip_height = clip.getHeight();
+
+        Point2D point2D = medianPoint(point2DList,0,clip_height - prefWidth);
+        assert point2D != null;
+
+        if(point2D.getX() + prefWidth > clip_width - prefWidth){
+            point2D = new Point2D(clip_width - prefWidth - 10, point2D.getY());
+        }
+        if(point2D.getX() < 0){
+            point2D = new Point2D(10, point2D.getY());
+        }
+        return new Point2D(point2D.getX() + clip_width * 0.05, point2D.getY() - clip_height* 0.05);
+    }
+
+    /**
+     * distribution points of line
+     * */
+    public static List<Point2D> getLineListPoint(Line line){
+        final int step = 10;
+        Pair<Double,Double> params = getParamsKB(line.getStartX(),line.getStartY(),line.getEndX(),line.getEndY());
+        double minX = Math.min(line.getStartX(),line.getEndX());
+        double maxX = Math.max(line.getStartX(),line.getEndX());
+
+        List<Point2D> point2DList = new ArrayList<>();
+        for(int i = 0;i <= step;i++){
+            double a = minX + (maxX - minX) * Math.random() ;
+            double b;
+            if(params.getValue() == null){
+                b = line.getEndY();
+            }else {
+                b = params.getKey() * a + params.getValue();
+            }
+            point2DList.add(new Point2D(a,b));
+        }
+        return point2DList;
+    }
+    public static List<Point2D> getListLinePoints(List<Line> lines){
+        List<Point2D> point2DList = new ArrayList<>();
+        for(Line line: lines){
+            point2DList.addAll(getLineListPoint(line));
+        }
+        return point2DList;
+    }
+
+
+    /**
+     *  calculate coefficients of line (param k and B)
+     *
+     *  first point
+     *  second point
+     * */
+    public static Pair<Double, Double> getParamsKB(double firstX, double firstY, double secondX, double secondY){
+        double k,b;
+        if(secondX == firstX){
+            k = 0;
+        }else {
+            k = (secondY - firstY) / (secondX - firstX);
+        }
+        if(firstY == secondY){
+            System.out.println("!!!!!!!!");
+            return new Pair<>(null,null);
+        }
+        b =-k* firstX + firstY;
+        return new Pair<>(k,b);
+    }
+
+    public static double[] StringToDoubleArray(String str,String regex){
+        String[] str_arr = str.split(regex);
+        double[] doubles = new double[str_arr.length];
+        for(int i = 0;i < str_arr.length;i++){
+            doubles[i] = Double.parseDouble(str_arr[i]);
+        }
+        return doubles;
+    }
+    public static double[][] stringToDoubleDoubleArray(String str, String regexAr, String regex){
+        String[] strArr = str.split(regexAr);
+        double[][] doubles = new double[strArr.length][];
+        for(int i = 0;i < strArr.length;i++){
+            doubles[i] = StringToDoubleArray(strArr[i],regex);
+        }
+        return doubles;
+    }
+
 }

@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<HBox xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gazprom_task2.FirstController">
+   <children>
+      <Pane fx:id="Total" prefHeight="462.0" prefWidth="741.0">
+         <children>
+            <Pane fx:id="pane" prefHeight="438.0" prefWidth="817.0">
+               <children>
+                  <ImageView fx:id="Irkutsk" fitWidth="109.0" layoutX="395.0" layoutY="222.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Irkutsk.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Yamal_Nenezkiy" fitWidth="100.0" layoutX="246.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Ямало-Ненецкий%20автономный%20округ.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Krasnor_kray" depthTest="DISABLE" fitWidth="132.5" layoutX="313.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true" scaleX="0.95">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/One.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Yakutia" fitHeight="208.0" layoutX="419.0" layoutY="64.5" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/three.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Chukotskyy" fitHeight="91.0" layoutX="589.7999877929688" layoutY="11.400001525878906" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Chukotka.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Camchatka" fitHeight="137.6" layoutX="630.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Kmachatcka.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Magadan" fitWidth="71.6" layoutX="583.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Magadan.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Habarovsk" fitHeight="152.0" layoutX="559.4000244140625" layoutY="168.8000030517578" pickOnBounds="true" preserveRatio="true" scaleX="0.97" scaleY="1.01">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Habarovsk.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Cahalin" fitWidth="54.0" layoutX="623.0" layoutY="235.5" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Cahalin.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Primorsky" fitWidth="32.0" layoutX="615.0" layoutY="294.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Primorsky.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Evreyskii" fitHeight="16.4" layoutX="595.5" layoutY="305.79998779296875" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Evreyskii.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Amurskaya" fitWidth="92.0" layoutX="508.0" layoutY="255.39999389648438" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Amurskaya.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Zabaykal" fitHeight="91.6" layoutX="468.0" layoutY="263.8999938964844" pickOnBounds="true" preserveRatio="true" scaleX="0.98" scaleY="1.02">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/ZaBaykal.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Buratya" fitWidth="92.1" layoutX="413.70001220703125" layoutY="279.0" pickOnBounds="true" preserveRatio="true" scaleX="0.99" scaleY="1.03">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Buratya.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Tuva" fitWidth="56.3" layoutX="360.0" layoutY="331.0" pickOnBounds="true" preserveRatio="true" scaleX="1.01" scaleY="1.03">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Тыва.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Hakasya" fitHeight="35.0" layoutX="354.0" layoutY="318.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Хакасия.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Altay" fitWidth="34.0" layoutX="332.0" layoutY="343.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Алтай.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Kemerovskaya" fitHeight="40.0" layoutX="336.2" layoutY="304.3" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Кемеровская_область.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Tomskaya" fitWidth="70.5" layoutX="291.2" layoutY="263.5" pickOnBounds="true" preserveRatio="true" scaleX="0.99">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Tomskaya.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Novosibirsk" fitHeight="34.0" layoutX="287.6" layoutY="299.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Novosibirsk.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Altayskii" fitHeight="34.0" layoutX="298.0" layoutY="326.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Алтайский.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Omskaya" fitWidth="33.0" layoutX="264.3" layoutY="282.1" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Омская.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Tumenskaya" fitWidth="56.0" layoutX="239.0" layoutY="266.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Тюменская.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Hantu" fitWidth="118.9" layoutX="227.2" layoutY="202.7" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Ханты-Мансийская.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Kurganskaya" fitWidth="36.0" layoutX="219.4" layoutY="289.4" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Курганская_область.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Sverdlovskaya" fitWidth="51.4" layoutX="199.0" layoutY="236.5" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Свердловская.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Chelubinsk" fitWidth="31.0" layoutX="194.6" layoutY="288.2" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Челябинская.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Bashkortostan" fitWidth="37.0" layoutX="173.6" layoutY="278.3" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Башкортостан.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Orenburg" fitHeight="46.5" layoutX="151.0" layoutY="290.5" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Оренбургская.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Samarskaya" fitWidth="27.0" layoutX="143.4" layoutY="285.7" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Самарская.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Saratovskaya" fitWidth="43.0" layoutX="110.0" layoutY="285.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Саратовская.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Volgogradskaya" fitWidth="37.0" layoutX="93.0" layoutY="292.3" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Volgogradskaya.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Astrahanskaya" fitWidth="17.0" layoutX="109.3" layoutY="320.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Архангельская.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Kalmukuya" fitWidth="40.6" layoutX="76.0" layoutY="318.6" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Калмыкия.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Rostov" fitWidth="36.0" layoutX="65.6" layoutY="297.6" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Ростовская.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Krasnodarskyy" fitWidth="25.4" layoutX="54.2" layoutY="316.2" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Краснодарский_край.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Adugaia" fitWidth="10.4" layoutX="60.1" layoutY="327.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Адыгея.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Stavropol" fitWidth="27.4" layoutX="72.4" layoutY="330.2" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Ставропольский_край.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Cherkesia" fitWidth="13.0" layoutX="65.9" layoutY="342.5" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Карачаево_черессия.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Cabardin" fitWidth="16.0" layoutX="74.0" layoutY="350.3" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Kabardinskaya.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Ingushatya" fitWidth="12.0" layoutX="85.4" layoutY="357.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Ингушетия.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Chechenskaya" fitHeight="12.0" fitWidth="14.0" layoutX="88.0" layoutY="359.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Чеченская.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Dagestan" fitWidth="17.0" layoutX="90.0" layoutY="351.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Дагестан.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Krum" fitWidth="24.0" layoutX="29.5" layoutY="302.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Крым.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Voroneg" fitWidth="25.0" layoutX="86.0" layoutY="276.7" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Voroneg.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Belgorodskaya" fitWidth="18.0" layoutX="71.4" layoutY="275.5" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Белгородская_область.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Kurskaya" fitWidth="22.0" layoutX="70.3" layoutY="263.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Курская.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Branskaya" fitWidth="22.0" layoutX="62.0" layoutY="244.2" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Брянская.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Orlovskaya" fitHeight="17.5" layoutX="78.0" layoutY="255.6" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Орловская.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Lipetsk" fitWidth="20.0" layoutX="88.0" layoutY="265.6" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Липецкая.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Tambov" fitWidth="17.6" layoutX="102.0" layoutY="270.4" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Тамбовская.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Pensenskaya" fitWidth="21.2" layoutX="117.0" layoutY="272.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Pensenskaya.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Ylyanovsk" fitWidth="23.7" layoutX="136.5" layoutY="276.2" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Ульяновская.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Tatarstan" fitWidth="41.0" layoutX="143.0" layoutY="266.5" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Татарстан.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Udmurtinskaya" fitWidth="20.7" layoutX="171.3" layoutY="256.6" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Удмуртинская.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Permskii" fitWidth="43.5" layoutX="183.7" layoutY="234.1" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Пермиский.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Comi" fitHeight="68.5" layoutX="171.7" layoutY="176.9" pickOnBounds="true" preserveRatio="true" scaleX="0.996">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Коми.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Nenetskyy" fitWidth="86.0" layoutX="184.0" layoutY="147.2" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Nentskyy.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Archangelsk" fitWidth="66.5" layoutX="135.6" layoutY="164.8" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Архангельский.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Murmansk" fitWidth="46.0" layoutX="136.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Мурманский.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Karelya" fitWidth="48.5" layoutX="101.8" layoutY="134.5" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Karelya.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Leningradskaya" fitWidth="42.4" layoutX="86.0" layoutY="176.4" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Ленинградская.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Sainkt_petersburg" fitWidth="9.0" layoutX="96.5" layoutY="186.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Saint_Petersburg.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Vologorodskaya" fitWidth="60.4" layoutX="111.0" layoutY="193.7" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Волгоградская.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Kirovskaya" fitWidth="43.5" layoutX="153.3" layoutY="223.6" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Кировская.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Smolenskaya" fitWidth="26.0" layoutX="72.0" layoutY="226.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Смоленская.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Calushskaya" fitHeight="15.0" layoutX="81.0" layoutY="241.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Калужская.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Tulskaya" fitWidth="15.6" layoutX="90.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Тульская.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Razanskaya" fitWidth="24.0" layoutX="101.5" layoutY="254.5" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Рязанская.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Mordoviya" fitWidth="25.8" layoutX="118.5" layoutY="264.5" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Мордовия.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Chuvachskaya" fitWidth="14.0" layoutX="142.0" layoutY="263.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Чувашская.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="MariiAl" fitHeight="14.0" layoutX="145.0" layoutY="255.8" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Мэрий_Эл.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="NishiyGorod" fitHeight="27.5" layoutX="122.0" layoutY="244.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Нижегородская_область.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Kostromskaya" fitWidth="39.5" layoutX="127.0" layoutY="226.5" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Костромская.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Yaroslavskaya" fitWidth="21.3" layoutX="114.5" layoutY="220.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Ярославская.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Tverskaya" fitWidth="42.0" layoutX="80.0" layoutY="213.5" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Tverskaya.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Novgorod" fitWidth="34.0" layoutX="83.5" layoutY="197.1" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Новгородская.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Pscov" fitWidth="22.0" layoutX="68.5" layoutY="189.5" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Псковская.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Vladimiskaya" fitWidth="20.4" layoutX="112.8" layoutY="239.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Владимирская.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Ivanovskaya" fitHeight="15.0" fitWidth="22.0" layoutX="121.0" layoutY="238.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Ivanonvskaya.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Moskovskaya_obl" fitWidth="23.0" layoutX="94.5" layoutY="233.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Moskovskaya_obl.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Moscow" fitWidth="7.0" layoutX="103.5" layoutY="241.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Moskva.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Kaliningradskaya" fitWidth="14.5" layoutX="26.0" layoutY="192.5" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Калининградская_область.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Alanya" fitWidth="10.0" layoutX="78.0" layoutY="358.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Алания.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="376.0" fitWidth="792.0" layoutX="-10.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/line.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="532.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3000 чел" wrappingWidth="91.17899848937986">
+                     <font>
+                        <Font name="Candara Light" size="19.0" />
+                     </font></Text>
+                  <Text layoutX="124.0" layoutY="264.0" strokeType="OUTSIDE" strokeWidth="0.0" text="250 чел" wrappingWidth="91.17899848937986">
+                     <font>
+                        <Font name="Candara Light" size="19.0" />
+                     </font></Text>
+                  <Pane layoutX="583.0" layoutY="160.0" prefHeight="265.0" prefWidth="144.0" style="-fx-background-color: WHITE; -fx-background-radius: 20;">
+                     <children>
+                        <Button layoutX="19.0" layoutY="15.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="109.0" style="-fx-background-color: White;" text="регрессионная модель" textAlignment="CENTER" wrapText="true">
+                           <effect>
+                              <DropShadow blurType="GAUSSIAN" spread="0.22">
+                                 <color>
+                                    <Color opacity="0.9399999976158142" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                           <font>
+                              <Font name="Candara Light" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="18.0" layoutY="77.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="109.0" style="-fx-background-color: White;" text="один" textAlignment="CENTER" wrapText="true">
+                           <effect>
+                              <DropShadow blurType="GAUSSIAN" spread="0.22">
+                                 <color>
+                                    <Color opacity="0.9399999976158142" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                           <font>
+                              <Font name="Candara Light" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="18.0" layoutY="139.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="109.0" style="-fx-background-color: White;" text="два" textAlignment="CENTER" wrapText="true">
+                           <effect>
+                              <DropShadow blurType="GAUSSIAN" spread="0.22">
+                                 <color>
+                                    <Color opacity="0.9399999976158142" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                           <font>
+                              <Font name="Candara Light" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="18.0" layoutY="205.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="109.0" style="-fx-background-color: White;" text="трии" textAlignment="CENTER" wrapText="true">
+                           <effect>
+                              <DropShadow blurType="GAUSSIAN" spread="0.22">
+                                 <color>
+                                    <Color opacity="0.9399999976158142" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                           <font>
+                              <Font name="Candara Light" size="12.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <effect>
+                        <DropShadow height="61.94" radius="33.1025" spread="0.51" width="72.47">
+                           <color>
+                              <Color red="0.507602334022522" green="0.45754384994506836" blue="0.75789475440979" />
+                           </color>
+                        </DropShadow>
+                     </effect></Pane>
+                  <ImageView fitHeight="32.0" fitWidth="60.0" layoutX="439.0" layoutY="224.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Child.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="32.0" fitWidth="60.0" layoutX="460.0" layoutY="224.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Child.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="32.0" fitWidth="60.0" layoutX="468.0" layoutY="209.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/com/example/gazprom_task2/Child.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="46.0" fitWidth="37.0" layoutX="398.0" layoutY="267.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GazProm_task2/src/main/resources/marks/College.png" />
+                     </image>
+                  </ImageView>
+                  <Line endX="100.0" startX="-100.0" />
+                  <Line endX="100.0" startX="-100.0" />
+                  <Line endX="-112.29998779296875" endY="70.80001831054688" layoutX="527.0" layoutY="195.0" startX="-66.70001220703125" startY="48.399993896484375" />
+                  <Line endX="-83.0999755859375" endY="55.0" layoutX="539.0" layoutY="204.0" startX="-76.29998779296875" startY="39.399993896484375" />
+                  <Line endX="-87.5" endY="27.399993896484375" layoutX="547.0" layoutY="216.0" startX="-111.5" startY="27.399993896484375" />
+                  <Line endX="-43.0999755859375" endY="-24.0" layoutX="537.0" layoutY="205.0" startX="-66.29998779296875" startY="12.800018310546875" />
+                  <Line endX="35.314208984375" endY="-17.4141845703125" layoutX="460.0" layoutY="197.0" startX="50.70001220703125" startY="2.399993896484375" />
+                  <Line endX="-11.29998779296875" endY="-10.0" layoutX="477.0" layoutY="205.0" startX="17.60711669921875" startY="-24.70709228515625" />
+                  <Pane layoutX="12.0" layoutY="12.0" prefHeight="93.0" prefWidth="228.0" style="-fx-background-color: White; -fx-background-radius: 10;">
+                     <children>
+                        <TextFlow layoutX="-1.0" layoutY="13.0" prefHeight="80.0" prefWidth="226.0" textAlignment="CENTER">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Профессиональные стандарты">
+                                 <font>
+                                    <Font name="Times New Roman" size="14.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </TextFlow>
+                     </children>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Pane>
+                  <Line endX="1.29998779296875" endY="20.600006103515625" layoutX="395.0" layoutY="258.0" startX="-157.3999786376953" startY="-145.99998474121094" />
+                  <Line endX="29.5" endY="8.399993896484375" layoutX="366.0" layoutY="267.0" startX="4.70001220703125" startY="5.20001220703125" />
+                  <Text layoutX="388.0" layoutY="139.0" rotate="-22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Долгосрочное планирование" />
+                  <Text layoutX="123.0" layoutY="255.0" rotate="-21.4" strokeType="OUTSIDE" strokeWidth="0.0" text="Среднесрочное планирование" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</HBox>

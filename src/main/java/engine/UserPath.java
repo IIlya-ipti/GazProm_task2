@@ -1,54 +1,85 @@
 package engine;
 
-import javafx.geometry.Point2D;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 import java.io.InputStream;
 import java.util.Objects;
 
+/**
+ * this entity for work with images
+ * */
 public enum UserPath {
 
     CollegeOne(
-            "/marks/building.png",
-            new Point2D(0.02,0.02),
-            new Point2D(0.03,0.03)
-            ),
+            "/marks/building.png"
+    ),
     CollegeTwo(
-            "/marks/College.png",
-            new Point2D(0.01,0.01),
-            new Point2D(0.015,0.015)
-            ),
+            "/marks/College.png"
+    ),
     CollegeThree(
-            "/marks/college-studying.png",
-            new Point2D(0.02,0.02),
-            new Point2D(0.03,0.03)
+            "/marks/college-studying.png"
     ),
     CollegeFour(
-            "/marks/college (1).png",
-            new Point2D(0.02,0.02),
-            new Point2D(0.03,0.03)
+            "/marks/college (1).png"
     ),
     CollegeFive(
-            "/marks/univeristy.png",
-            new Point2D(0.02,0.02),
-            new Point2D(0.03,0.03)
-            );
-
-
-
-
-
-
-
-
-    public final Point2D    oldScale;
-    public final Point2D    startScale;
-    public final String     path;
-    UserPath(String path, Point2D startScale, Point2D oldScale){
+            "/marks/univeristy.png"
+    ),
+    ChildTwo(
+            "/com/example/gazprom_task2/Child.png"
+    ),
+    ChildOne(
+            "/com/example/gazprom_task2/Child2.png"
+    ),
+    Circle(
+            "/com/example/gazprom_task2/Рисунок1.png"
+    ),
+    UDGU(
+            "/marks/УДГУ.png"
+    ),
+    GORNUY(
+            "/marks/Горный.png"
+    ),
+    UGORSKYi(
+            "/marks/Югорский.png"
+    ),
+    POLYTECH(
+            "/marks/tomskij_politehnicheskij_universitet (1).png"
+    ),
+    KOGALUM(
+            "/marks/Когалымский_политехнический_колледж.png"
+    ),
+    TUMEN(
+            "/marks/Тюменский_индустриальный.png"
+    ),
+    GUPKIN(
+            "/marks/gubkin.png"
+    ),
+    AGNI(
+            "/marks/АГНИ.png"
+    ),
+    UFIMSKI(
+            "/marks/Уфимский_университет.png"
+    ),
+    UTAK(
+            "/marks/УТЭК.png"
+    ),
+    UHTINSKII(
+            "/marks/Ухтинский.png"
+    ),
+    VOLGOGRAD(
+            "/marks/Волгоград.png"
+    ),
+    URENGOY(
+            "/marks/Уренгой.png"
+    ),
+    GAZ_PROM(
+            "/marks/gazprom_logo.png"
+    );
+    public final String path;
+    UserPath(String path){
         this.path = path;
-        this.oldScale = oldScale;
-        this.startScale = startScale;
     }
 
     public InputStream getPathStream() {
@@ -57,6 +88,13 @@ public enum UserPath {
     public ImageView getImageViewNotScale(){
         return new ImageView(new Image(getPathStream()));
     }
+
+    /**
+     * return ImageView object from the image pointed to by path
+     *
+     * width - set fitWidth for imageView
+     * height - set fitHeight for imageView
+     * */
     static public ImageView getImageViewSetWidthHeight(UserPath userPath,double width, double height, boolean preserveRatio){
         ImageView imageView = userPath.getImageViewNotScale();
         imageView.setPreserveRatio(preserveRatio);
@@ -64,4 +102,5 @@ public enum UserPath {
         imageView.setFitHeight(height);
         return imageView;
     }
+
 }

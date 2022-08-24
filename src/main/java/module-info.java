@@ -9,6 +9,7 @@ module com.example.gazprom {
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
+    requires java.desktop;
 
     opens com.example.gazprom_task2 to javafx.fxml;
     exports com.example.gazprom_task2;
