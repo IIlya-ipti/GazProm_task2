@@ -241,6 +241,9 @@ public class objectController implements Initializable {
     private void afterInit() {
     }
 
+    /**
+     * update map node after set new bounds (scene bounds)
+     * */
     public void update(Scene scene){
         Pane pane = paneNoWith;
 
@@ -263,7 +266,7 @@ public class objectController implements Initializable {
 
     }
 
-    void setYear(String Data){
+    public void setYear(String Data){
         int index = yearID.getItems().indexOf(Data);
         if(index == -1){
             yearID.getItems().add(Data);
@@ -272,16 +275,16 @@ public class objectController implements Initializable {
         yearID.getSelectionModel().select(index);
 
     }
-    void setMG(int valMG){
+    public void setMG(int valMG){
         MG.setText(String.valueOf(valMG));
     }
-    void setGPA(int valGPA){
+    public void setGPA(int valGPA){
         GPA.setText(String.valueOf(valGPA));
     }
-    void setGRC(int valGRC){
+    public void setGRC(int valGRC){
         GRC.setText(String.valueOf(valGRC));
     }
-    void calc(){
+    public void calc(){
         score.fire();
     }
 }
