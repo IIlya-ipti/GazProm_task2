@@ -41,9 +41,6 @@ public class Parser {
         }
     }
 
-    /*
-    * [INP] val -
-    * */
     public Config StringToConfig(String val){
         Config config = new Config();
         String[] arStr = val.split(";");
