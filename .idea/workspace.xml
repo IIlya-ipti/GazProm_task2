@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e0dd420a-27b6-4601-9222-4d9a14e7c636" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_swing_18_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_swing_win_18_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configs/config_new_new.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/marks/black_gubkin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/marks/black_tomskij_politehnicheskij_universitet (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/marks/black_АГНИ.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/marks/black_Волгоград.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/marks/black_Горный.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/marks/black_Когалымский_политехнический_колледж.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/marks/black_Тюменский_индустриальный.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/marks/black_УДГУ.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/marks/black_УТЭК.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/marks/black_Уренгой.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/marks/black_Уфимский_университет.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/marks/black_Ухтинский.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/marks/black_Югорский.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GazProm_task2_.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ConnectedObjects/Field.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/parser/ConfigField.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/parser/ConfigPipe.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/gazprom_task2/black_cicle_ver2_blue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/gazprom_task2/cicle_ver2_blue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/marks/black_gubkin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/marks/black_tomskij_politehnicheskij_universitet (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/marks/black_АГНИ.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/marks/black_Волгоград.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/marks/black_Горный.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/marks/black_Когалымский_политехнический_колледж.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/marks/black_Тюменский_индустриальный.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/marks/black_УДГУ.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/marks/black_УТЭК.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/marks/black_Уренгой.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/marks/black_Уфимский_университет.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/marks/black_Ухтинский.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/marks/black_Югорский.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/ConnectedObjects/Field.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/example/gazprom_task2/black_cicle_ver2_blue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/example/gazprom_task2/cicle_ver2_blue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/marks/black_gubkin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/marks/black_tomskij_politehnicheskij_universitet (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/marks/black_АГНИ.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/marks/black_Волгоград.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/marks/black_Горный.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/marks/black_Когалымский_политехнический_колледж.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/marks/black_Тюменский_индустриальный.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/marks/black_УДГУ.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/marks/black_УТЭК.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/marks/black_Уренгой.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/marks/black_Уфимский_университет.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/marks/black_Ухтинский.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/marks/black_Югорский.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/parser/ConfigField.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/parser/ConfigPipe.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-archiver/maven-archiver.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/src/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GazProm_task2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/GazProm_task2_.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/config.txt" beforeDir="false" afterPath="$PROJECT_DIR$/configs/config.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/config_new.txt" beforeDir="false" afterPath="$PROJECT_DIR$/configs/config_new.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/copy_config.txt" beforeDir="false" afterPath="$PROJECT_DIR$/configs/copy_config.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ConnectedObjects/College.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ConnectedObjects/College.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ConnectedObjects/Connect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ConnectedObjects/Connect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ConnectedObjects/ConnectedObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ConnectedObjects/ConnectedObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ConnectedObjects/Information.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ConnectedObjects/Information.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ConnectedObjects/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ConnectedObjects/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ConnectedObjects/Pipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ConnectedObjects/Pipe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ConnectedObjects/UsedObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ConnectedObjects/UsedObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Objects/VboxList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Objects/VboxList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gazprom_task2/GazPromApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gazprom_task2/GazPromApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gazprom_task2/mapSlideController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gazprom_task2/mapSlideController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gazprom_task2/objectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gazprom_task2/objectController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/engine/UserPath.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/engine/UserPath.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/engine/UtilityFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/engine/UtilityFunctions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/parser/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parser/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/parser/ConfigTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parser/ConfigTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/parser/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parser/Parser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ConnectedObjects/College.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ConnectedObjects/College.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ConnectedObjects/Connect.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ConnectedObjects/Connect.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ConnectedObjects/ConnectedObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ConnectedObjects/ConnectedObject.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ConnectedObjects/Information.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ConnectedObjects/Information.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ConnectedObjects/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ConnectedObjects/Menu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ConnectedObjects/Pipe.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ConnectedObjects/Pipe.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ConnectedObjects/UsedObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ConnectedObjects/UsedObject.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Objects/CheckBoxWrapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Objects/CheckBoxWrapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Objects/VboxList.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Objects/VboxList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/gazprom_task2/GazPromApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/gazprom_task2/GazPromApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/gazprom_task2/mapSlideController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/gazprom_task2/mapSlideController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/gazprom_task2/objectController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/gazprom_task2/objectController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/engine/UserPath.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/engine/UserPath.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/engine/UtilityFunctions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/engine/UtilityFunctions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/parser/Config.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/parser/Config.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/parser/ConfigTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/parser/ConfigTable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/parser/Parser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/parser/Parser.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2DsuW68pKQxxUuCLuCyquw5aw4Y" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RunManager">
+    <configuration name="GazPromApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.gazprom_task2.GazPromApp" />
+      <module name="GazProm_task2_" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.gazprom_task2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.GazPromApp" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e0dd420a-27b6-4601-9222-4d9a14e7c636" name="Changes" comment="" />
+      <created>1661500145085</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1661500145085</updated>
+      <workItem from="1661500149371" duration="16288000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

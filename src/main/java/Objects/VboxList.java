@@ -1,5 +1,6 @@
 package Objects;
 
+import ConnectedObjects.College;
 import ConnectedObjects.Pipe;
 import engine.Styles;
 import javafx.scene.control.CheckBox;
@@ -8,12 +9,15 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
 
+import java.util.List;
+
 
 /**
  * list of CheckBoxWrapper (list of pipes)
  * */
 public class VboxList {
     private final VBox vBox;
+    public static List<College> collegeList =  null;
     public VboxList(Double spacing){
         this.vBox = new VBox();
         vBox.setSpacing(spacing);
@@ -64,11 +68,17 @@ record CheckBoxWrapper(CheckBox checkBox, Pipe wrapper) {
                 if (wrapper != null) {
                     wrapper.off();
                 }
+                for(College college : VboxList.collegeList){
+                    college.on();
+                }
                 actualCheckBox = null;
             } else {
                 if (actualCheckBox != null && actualCheckBox != this) {
                     actualCheckBox.checkOff();
 
+                }
+                for(College college: VboxList.collegeList){
+                    college.off();
                 }
                 if (wrapper != null) {
                     wrapper.on();

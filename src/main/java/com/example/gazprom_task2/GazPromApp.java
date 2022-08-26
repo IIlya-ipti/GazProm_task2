@@ -53,7 +53,7 @@ public class GazPromApp extends Application {
         controller.update(scene);
         controller1.update(scene);
 
-        stage.setFullScreen(false);
+        stage.setFullScreen(true);
         stage.show();
     }
 

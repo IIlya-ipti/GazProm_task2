@@ -10,6 +10,6 @@ public class ConfigTable {
     public String shortProject;
     public String totalWorkers;
     public String period;
-    public String vlA;
-    public String vlB;
+    public String cordX;
+    public String cordY;
 }

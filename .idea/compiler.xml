@@ -6,11 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="GazProm_task2" />
+        <module name="GazProm_task2_" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="GazProm_task2" target="17" />
+      <module name="GazProm_task2_" target="17" />
+      <module name="maven-archiver" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

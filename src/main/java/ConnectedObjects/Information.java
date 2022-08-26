@@ -56,6 +56,11 @@ public class Information implements ConnectedObject, Animation {
     }
 
     @Override
+    public void connect(Menu menu) {
+
+    }
+
+    @Override
     public void connect(Pipe pipe, Plan plan) {
     }
 

@@ -43,22 +43,21 @@ public class Parser {
 
     public Config StringToConfig(String val){
         Config config = new Config();
-        String[] arStr = val.split(";");
+        String[] arStr = val.split("__");
         for(String vl: arStr) {
             String[] vl_arr = vl.split("_");
             if(vl_arr.length > 1) {
-                if (vl_arr[0].equals("name")) {
-                    config.name = vl_arr[1];
-                }
-                if (vl_arr[0].equals("coords")) {
-                    config.coords = UtilityFunctions.stringToDoubleDoubleArray(vl_arr[1],"!",",");
+                if(vl_arr[0].equals("pipe")){
+                    config.configPipe = Config.getConfigPipe(vl_arr[1]);
                 }
                 if(vl_arr[0].equals("table")){
                     config.configTable = Config.getConfigTable(vl_arr[1]);
                 }
                 if(vl_arr[0].equals("college")){
                     config.configCollege = Config.getConfigCollege(vl_arr[1]);
-                    System.out.println("College!");
+                }
+                if(vl_arr[0].equals("field")){
+
                 }
             }
 

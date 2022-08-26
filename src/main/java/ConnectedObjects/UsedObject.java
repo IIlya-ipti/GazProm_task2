@@ -47,6 +47,10 @@ public class UsedObject implements ConnectedObject, Animation {
     }
 
     @Override
+    public void connect(Menu menu) {
+    }
+
+    @Override
     public void connect(Pipe pipe, Plan plan) {
         pipe.connect(this,plan);
     }

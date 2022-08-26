@@ -60,6 +60,7 @@ public class Connect implements Animation {
             };
             active = !active;
 
+            // active connected objects
             if (oneAnimation != null) {
                 oneAnimation.on();
             }
@@ -77,6 +78,8 @@ public class Connect implements Animation {
                 line.setVisible(false);
                 line.setDisable(true);
             }
+
+            // disable connected objects
             if (oneAnimation != null) {
                 oneAnimation.off();
             }

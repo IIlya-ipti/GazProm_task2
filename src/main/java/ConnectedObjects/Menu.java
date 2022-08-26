@@ -16,6 +16,10 @@ import parser.ConfigTable;
 
 public class Menu extends Information implements Animation {
     static Menu actualMenu = null;
+
+    /**
+     * information of pipe
+     * */
     private Text name;
     private Text longProject;
     private Text shortProject;
@@ -240,9 +244,9 @@ public class Menu extends Information implements Animation {
         this.setName(configTable.name);
         this.setLongProject(configTable.longProject);
         this.setTotalWorkers(configTable.totalWorkers);
-        if(configTable.vlA != null){
-            getPane().setLayoutX(Double.parseDouble(configTable.vlA));
-            getPane().setLayoutY(Double.parseDouble(configTable.vlB));
+        if(configTable.cordX != null){
+            getPane().setLayoutX(Double.parseDouble(configTable.cordX));
+            getPane().setLayoutY(Double.parseDouble(configTable.cordY));
         }
 
     }

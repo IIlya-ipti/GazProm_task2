@@ -5,51 +5,96 @@ import engine.*;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
+import javafx.embed.swing.SwingFXUtils;
 import javafx.geometry.Point2D;
+import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.image.ImageView;
+import javafx.scene.image.Image;
 import javafx.scene.layout.Pane;
 import javafx.util.Duration;
 import parser.Config;
 import parser.ConfigCollege;
 
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class College extends UsedObject {
     private final ArrayList<ImageView> imageViews = new ArrayList<>();
-    private UserPath userPath;
-    public College(UserPath userPath,double width, double height,Pane pane){
-        this(
-            UserPath.getImageViewSetWidthHeight(
+    private final UserPath userPath;
+    private final Pane parentPane;
+
+    // two version of image
+    private final Image greyImage;
+    private final Image image;
+
+    // work with circle animation
+    private Timeline circleAnimation;
+    private ImageView circleImageView;
+    private Image circleOn;
+    private Image circleOff;
+
+    public College(UserPath userPath,double width, double height,Pane pane)  {
+        super(UserPath.getImageViewSetWidthHeight(
                     userPath,
                     width,
                     height,
-                    true
-                    ),pane
+                    true)
         );
+        ImageView imageView = getImageObject();
         this.userPath = userPath;
+        this.parentPane = pane;
 
-    }
-    public College(ImageView imageView, Pane pane) {
-        super(imageView);
+        // get grey image version
+        this.greyImage = UserPath.getImageViewSetWidthHeight(
+                userPath,
+                width,
+                height,
+                true,
+                true
+        ).getImage();
+        this.image = getImageObject().getImage();
+
+        // add circle and animation for circle
+        addCircle();
+
         pane.getChildren().add(imageView);
+        imageView.toFront();
+    }
+
+    /**
+     * add background circle and animation for circle
+     * */
+    private void addCircle(){
+        ImageView imageView = getImageObject();
 
         // make a circle on the background
-        ImageView imageView1 = UserPath.getImageViewSetWidthHeight(UserPath.Circle, 50, 50, true);
-        pane.getChildren().add(imageView1);
+        this.circleImageView = UserPath.getImageViewSetWidthHeight(UserPath.Circle, 50, 50, true);
+        parentPane.getChildren().add(this.circleImageView);
+
+        // set grey version off image
+        this.circleOff = UserPath.getImageViewSetWidthHeight(UserPath.Circle,50,50,true,true)
+                .getImage();
+        this.circleOn = this.circleImageView.getImage();
 
         // set circle position to middle
-        imageView1.setLayoutX(imageView.getLayoutX() + imageView.getBoundsInParent().getWidth() / 2 - imageView1.getFitWidth() / 2);
-        imageView1.setLayoutY(imageView.getLayoutY() + imageView.getBoundsInParent().getHeight() / 2 - imageView1.getFitHeight() / 2);
-        imageViews.add(imageView1);
+        this.circleImageView.setLayoutX(imageView.getLayoutX() + imageView.getBoundsInParent().getWidth() / 2 -
+                this.circleImageView.getFitWidth() / 2);
+        this.circleImageView.setLayoutY(imageView.getLayoutY() + imageView.getBoundsInParent().getHeight() / 2 -
+                this.circleImageView.getFitHeight() / 2);
+        imageViews.add(this.circleImageView);
 
         // add animation for circle
-        Timeline timeline = new Timeline(new KeyFrame(Duration.millis(10000), new KeyValue(imageView1.rotateProperty(), 360)));
-        timeline.setCycleCount(100000);
-        timeline.play();
+        circleAnimation = new Timeline(new KeyFrame(Duration.millis(10000), new KeyValue(
+                this.circleImageView.rotateProperty(), 360)));
+        circleAnimation.setCycleCount(100000);
+        circleAnimation.play();
 
-
-        imageView.toFront();
     }
 
     private double getCirclePointX(ImageView imageView1){
@@ -77,32 +122,26 @@ public class College extends UsedObject {
     @Override
     public void on() {
         if(!active) {
-            imageObject.setDisable(false);
-            imageObject.setVisible(true);
-            active = !active;
-            for(ImageView imageView: imageViews){
-                imageView.setVisible(true);
-                imageView.setDisable(false);
-            }
+            active = true;
             for(Connect connect : connectedObjectConnectHashMap.values()){
                 connect.on();
             }
+            this.getImageObject().setImage(image);
+            this.circleImageView.setImage(circleOn);
+            circleAnimation.play();
         }
     }
 
     @Override
     public void off() {
         if(active) {
-            getImageObject().setDisable(true);
-            getImageObject().setVisible(false);
-            active = !active;
-            for(ImageView imageView: imageViews){
-                imageView.setVisible(false);
-                imageView.setDisable(true);
-            }
+            active = false;
             for(Connect connect: connectedObjectConnectHashMap.values()){
                 connect.off();
             }
+            this.getImageObject().setImage(greyImage);
+            this.circleImageView.setImage(circleOff);
+            circleAnimation.pause();
         }
     }
 
@@ -147,4 +186,9 @@ public class College extends UsedObject {
         config.configCollege.height = getImageObject().getFitHeight();
         return config;
     }
+
+    public Point2D getCenterCirclePoint2D(){
+        return UtilityFunctions.getCenterObject(circleImageView);
+    }
+
 }

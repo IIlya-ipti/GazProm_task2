@@ -1,15 +1,32 @@
 package parser;
 
 import engine.UserPath;
+import engine.UtilityFunctions;
 
 /**
  * this class contains all information from config file
  * */
 public class Config {
-    public String name;
-    public double[][] coords;
+    public ConfigPipe configPipe;
     public ConfigTable configTable;
     public ConfigCollege configCollege;
+
+    public static ConfigPipe getConfigPipe(String string){
+        ConfigPipe configPipe = new ConfigPipe();
+        String[] arStr = string.split(";");
+        for(String str: arStr){
+            String[] arArStr = str.split("=");
+            if(arArStr.length > 1) {
+                if (arArStr[0].equals("name")) {
+                    configPipe.name = arArStr[1];
+                }
+                if (arArStr[0].equals("coords")) {
+                    configPipe.coords = UtilityFunctions.stringToDoubleDoubleArray(arArStr[1], "!", ",");
+                }
+            }
+        }
+        return configPipe;
+    }
     public static ConfigTable getConfigTable(String string){
         ConfigTable configTable = new ConfigTable();
         String[] arStr = string.split(",");
@@ -30,11 +47,11 @@ public class Config {
             if(arArStr[0].equals("period")){
                 configTable.period = arArStr[1];
             }
-            if(arArStr[0].equals("vlA")){
-                configTable.vlA = arArStr[1];
+            if(arArStr[0].equals("cordX")){
+                configTable.cordX = arArStr[1];
             }
-            if(arArStr[0].equals("vlB")){
-                configTable.vlB = arArStr[1];
+            if(arArStr[0].equals("cordY")){
+                configTable.cordY = arArStr[1];
             }
         }
         return configTable;
@@ -86,56 +103,59 @@ public class Config {
             str.
                     append("height=").
                     append(this.configCollege.height);
-            str.append(";\n");
+            str.append("__\n");
         }
-        if(this.name != null) {
+        if(this.configPipe != null) {
             str.
-                    append("name_\n").
-                    append(this.name).
+                    append("pipe_\n");
+            str.
+                    append("name=").
+                    append(this.configPipe.name).
                     append(";\n");
-            if (this.coords != null) {
+            if (this.configPipe.coords != null) {
                 str.
-                        append("coords_\n").
-                        append(coordsToString(this.coords)).
-                        append(";\n");
+                        append("coords=\n").
+                        append(coordsToString(this.configPipe.coords));
             }
-            if (configTable != null) {
+            str.append("__\n");
+        }
+        if (this.configTable != null) {
+            str.
+                    append("table_\n");
+            str.
+                    append("name=").
+                    append(this.configTable.name).
+                    append(",\n");
+            str.
+                    append("longProject=").
+                    append(this.configTable.longProject).
+                    append(",\n");
+            str.
+                    append("shortProject=").
+                    append(this.configTable.shortProject).
+                    append(",\n");
+            str.
+                    append("totalWorkers=").
+                    append(this.configTable.totalWorkers).
+                    append(",\n");
+            str.
+                    append("period=").
+                    append(this.configTable.period);
+            if (this.configTable.cordX != null) {
+                str.append(",\n");
                 str.
-                        append("table_\n");
-                str.
-                        append("name=").
-                        append(this.configTable.name).
+                        append("cordX=").
+                        append(this.configTable.cordX).
                         append(",\n");
                 str.
-                        append("longProject=").
-                        append(this.configTable.longProject).
-                        append(",\n");
-                str.
-                        append("shortProject=").
-                        append(this.configTable.shortProject).
-                        append(",\n");
-                str.
-                        append("totalWorkers=").
-                        append(this.configTable.totalWorkers).
-                        append(",\n");
-                str.
-                        append("period=").
-                        append(this.configTable.period);
-                if (this.configTable.vlA != null) {
-                    str.append(",\n");
-                    str.
-                            append("vlA=").
-                            append(this.configTable.vlA).
-                            append(",\n");
-                    str.
-                            append("vlB=").
-                            append(this.configTable.vlB).
-                            append(";\n");
-                } else {
-                    str.append(";\n");
-                }
+                        append("cordY=").
+                        append(this.configTable.cordY).
+                        append("__\n");
+            } else {
+                str.append("__\n");
             }
         }
+
         return str.toString();
 
     }

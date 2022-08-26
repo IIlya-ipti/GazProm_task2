@@ -4,8 +4,7 @@ public interface ConnectedObject {
     void connect(Information information);
     void connect(Worker worker);
     void connect(UsedObject usedObject, Plan plan);
-
-
+    void connect(Menu menu);
     void connect(Pipe pipe, Plan plan);
 
     /**

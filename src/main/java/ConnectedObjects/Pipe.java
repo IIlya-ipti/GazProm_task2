@@ -8,6 +8,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
 import parser.Config;
+import parser.ConfigPipe;
 import parser.ConfigTable;
 
 import java.util.ArrayList;
@@ -32,6 +33,9 @@ public class Pipe implements ConnectedObject,Animation{
 
     // name of pipe
     private String name;
+
+    // nearest objects (colleges)
+    private final List<College> collegeList = new ArrayList<>();
 
     public Pipe(Pane paneParent){
         this.paneParent = paneParent;
@@ -119,18 +123,18 @@ public class Pipe implements ConnectedObject,Animation{
 
     }
 
+    @Override
     public void connect(Menu menu){
-
-        List<Point2D> point2DList = UtilityFunctions.getListLinePoints(this.getAllLines());
-
         Pane pane = (Pane) menu.getPane().getParent();
 
-        if(point2DList.size() > 0){
-            Point2D point2D = UtilityFunctions.getMenuPoint(point2DList,menu.getPane().getPrefWidth(),menu.getPane().getPrefHeight(),pane.getBoundsInLocal());
+        //List<Point2D> point2DList = UtilityFunctions.getListLinePoints(this.getAllLines());
+        // set new layout points for menu (now this coords in config.txt)
+        /*if(point2DList.size() > 0){
+            //Point2D point2D = UtilityFunctions.getMenuPoint(point2DList,menu.getPane().getPrefWidth(),menu.getPane().getPrefHeight(),pane.getBoundsInLocal());
 
-            menu.getPane().setLayoutX(point2D.getX());
-            menu.getPane().setLayoutY(point2D.getY());
-        }
+            //menu.getPane().setLayoutX(point2D.getX());
+            //menu.getPane().setLayoutY(point2D.getY());
+        }*/
 
         new Connect(this,menu,pane);
         this.menu = menu;
@@ -195,6 +199,9 @@ public class Pipe implements ConnectedObject,Animation{
                 line.setDisable(false);
             }
         }
+        for (College college:collegeList){
+            college.on();
+        }
     }
 
     @Override
@@ -210,6 +217,9 @@ public class Pipe implements ConnectedObject,Animation{
                 line.setDisable(true);
             }
         }
+        for (College college:collegeList){
+            college.off();
+        }
     }
 
     @Deprecated
@@ -220,8 +230,8 @@ public class Pipe implements ConnectedObject,Animation{
 
     public List<Line> getAllLines(){
         List<Line> lines = new ArrayList<>();
-        for(List<Line> imageViews : listsOfLines){
-            lines.addAll(imageViews);
+        for(List<Line> lineList : listsOfLines){
+            lines.addAll(lineList);
         }
         return lines;
     }
@@ -244,9 +254,9 @@ public class Pipe implements ConnectedObject,Animation{
         return doubleList;
     }
     public void setConfig(Config config){
-        this.name = config.name;
-        if(config.coords != null) {
-            for(double[] doubleValues : config.coords) {
+        this.name = config.configPipe.name;
+        if(config.configPipe.coords != null) {
+            for(double[] doubleValues : config.configPipe.coords) {
                 addLine(doubleValues);
             }
         }
@@ -258,8 +268,9 @@ public class Pipe implements ConnectedObject,Animation{
 
     public Config pipeToConfig(){
         Config config = new Config();
-        config.name = this.name;
-        config.coords = this.getAllPoints();
+        config.configPipe = new ConfigPipe();
+        config.configPipe.name = this.name;
+        config.configPipe.coords = this.getAllPoints();
         if(this.menu != null) {
             config.configTable = new ConfigTable();
             config.configTable.name = this.menu.getName().getText();
@@ -267,9 +278,21 @@ public class Pipe implements ConnectedObject,Animation{
             config.configTable.longProject = this.menu.getLongProject().getText();
             config.configTable.shortProject = this.menu.getShortProject().getText();
             config.configTable.totalWorkers = this.menu.getTotalWorkers().getText();
-            config.configTable.vlA = String.valueOf(this.menu.getPane().getLayoutX());
-            config.configTable.vlB = String.valueOf(this.menu.getPane().getLayoutY());
+            config.configTable.cordX = String.valueOf(this.menu.getPane().getLayoutX());
+            config.configTable.cordY = String.valueOf(this.menu.getPane().getLayoutY());
         }
         return config;
     }
+
+
+    public void setColleges(List<College> colleges){
+        // all points off pipe
+        List<Point2D> point2DList = UtilityFunctions.getListLinePoints(
+                this.getAllLines()
+        );
+
+        // add the three closest collages to the array
+        UtilityFunctions.filterColleges(colleges, point2DList, this.collegeList);
+    }
+
 }

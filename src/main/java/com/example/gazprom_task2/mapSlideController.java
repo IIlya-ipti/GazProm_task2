@@ -1,6 +1,7 @@
 package com.example.gazprom_task2;
 
 import ConnectedObjects.College;
+import ConnectedObjects.Field;
 import ConnectedObjects.Menu;
 import ConnectedObjects.Pipe;
 import engine.*;
@@ -18,6 +19,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.*;
 import javafx.stage.Stage;
@@ -34,7 +36,6 @@ public class mapSlideController implements Initializable {
         this.first = one;
         this.second = two;
     }
-
 
     @FXML
     private Pane paneMap;
@@ -64,7 +65,7 @@ public class mapSlideController implements Initializable {
             vl.append(college.CollegeToConfig());
         }
 
-        try(FileWriter writer = new FileWriter("configs/config_new.txt", false))
+        try(FileWriter writer = new FileWriter("configs/config_new_new.txt", false))
         {
             writer.write(vl.toString());
         }
@@ -99,19 +100,23 @@ public class mapSlideController implements Initializable {
         paneMap.getChildren().add(pipeList.getVBox());
 
         // parse a config
-        readConfig();
+        try {
+            readConfig();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     /**
      * this method for parse config
      * */
-    private void readConfig(){
+    private void readConfig() throws IOException {
         Parser parser = new Parser("configs/config.txt");
         List<Config> configs = parser.getConfigs();
 
         for(Config config : configs){
+            // set colleges
             if(config.configCollege != null){
-                // set colleges
                 College college = new College(
                         config.configCollege.path,
                         config.configCollege.width,
@@ -123,14 +128,18 @@ public class mapSlideController implements Initializable {
                 colleges.add(college);
             }
             Menu menu = null;
+
+            // set menu
             if (config.configTable != null) {
                 menu = new Menu(paneMap);
                 menu.setFieldsOfConfig(config.configTable);
             }
-            if(config.name != null) {
+
+            // set pipe
+            if(config.configPipe != null) {
                 Pipe pipe2 = new Pipe(paneMap);
                 pipe2.setConfig(config);
-                pipeList.add(config.name, pipe2);
+                pipeList.add(config.configPipe.name, pipe2);
                 pipes.add(pipe2);
                 if(menu != null){
                     pipe2.connect(menu);
@@ -138,6 +147,10 @@ public class mapSlideController implements Initializable {
                 pipe2.off();
             }
         }
+        for(Pipe pipe:pipes){
+            pipe.setColleges(colleges);
+        }
+        VboxList.collegeList = colleges;
     }
 
     /**

@@ -1,5 +1,6 @@
 package engine;
 
+import ConnectedObjects.College;
 import javafx.geometry.Bounds;
 import javafx.geometry.Point2D;
 import javafx.scene.Node;
@@ -11,6 +12,10 @@ import javafx.scene.shape.Ellipse;
 import javafx.scene.shape.Line;
 import javafx.util.Pair;
 
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -267,7 +272,9 @@ public class UtilityFunctions {
      * distribution points of line
      * */
     public static List<Point2D> getLineListPoint(Line line){
-        final int step = 10;
+        // count of line random points
+        final int step = 5;
+
         Pair<Double,Double> params = getParamsKB(line.getStartX(),line.getStartY(),line.getEndX(),line.getEndY());
         double minX = Math.min(line.getStartX(),line.getEndX());
         double maxX = Math.max(line.getStartX(),line.getEndX());
@@ -331,5 +338,50 @@ public class UtilityFunctions {
         }
         return doubles;
     }
+
+    /**
+     * convert image to grayStyle
+     * */
+    public static Image convertToGrayScale(Image image) {
+        WritableImage result = new WritableImage((int) image.getWidth(), (int) image.getHeight());
+        PixelReader preader = image.getPixelReader();
+        PixelWriter pwriter = result.getPixelWriter();
+
+        for (int i = 0; i < result.getWidth(); i++)
+            for (int j = 0; j < result.getHeight(); j++)
+                pwriter.setColor(i , j, preader.getColor(i, j).grayscale());
+        return result;
+    }
+
+
+    /**
+     * pointsOfObject - points of the object under consideration,
+     *                       relative to which we are looking for the nearest colleges.
+     *  colleges - all collages.
+     *  totalCollegeList - final list of colleges (link to it)
+     */
+    public static void filterColleges(List<College> colleges, List<Point2D> pointsOfObject, List<College> totalCollegeList) {
+        // dist - college for search the nearest colleges
+        List<Pair<Double,College>> collegeList = new ArrayList<>();
+        if(pointsOfObject.size() != 0) {
+            for (College college : colleges) {
+                Point2D first = college.getCenterCirclePoint2D();
+                Point2D second = UtilityFunctions.getMinPoint(first, pointsOfObject);
+                collegeList.add(
+                        new Pair<>(first.distance(second),college)
+                );
+            }
+            collegeList.sort(Comparator.comparingDouble(Pair::getKey));
+
+            // count of usage colleges
+            final int nColleges = 3;
+
+            // add
+            for(int i = 0;i < nColleges;i++){
+                totalCollegeList.add(collegeList.get(i).getValue());
+            }
+        }
+    }
+
 
 }

@@ -265,7 +265,6 @@ public class objectController implements Initializable {
         );
 
     }
-
     public void setYear(String Data){
         int index = yearID.getItems().indexOf(Data);
         if(index == -1){
