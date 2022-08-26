@@ -1,5 +1,8 @@
 package ConnectedObjects;
 
+/**
+ * object connection interface
+ * */
 public interface ConnectedObject {
     void connect(Information information);
     void connect(Worker worker);
