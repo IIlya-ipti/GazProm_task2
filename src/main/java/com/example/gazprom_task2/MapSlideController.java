@@ -19,18 +19,18 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.*;
 import javafx.stage.Stage;
 import parser.Config;
 import parser.Parser;
 
-public class mapSlideController implements Initializable {
+public class MapSlideController implements Initializable {
     public Parent first;
     public Parent second; // next slide
     private final List<Pipe> pipes =        new ArrayList<>();
     private final List<College> colleges =  new ArrayList<>();
+    private final List<Field> fieldList =  new ArrayList<>();
 
     public void setNextScene(Parent one, Parent two){
         this.first = one;
@@ -59,13 +59,16 @@ public class mapSlideController implements Initializable {
         ((Stage)paneMap.getScene().getWindow()).close();
         StringBuilder vl = new StringBuilder("");
         for(Pipe pipe : pipes){
-            vl.append(pipe.pipeToConfig());
+            vl.append(pipe.toConfig());
+        }
+        for(Field field: fieldList){
+            vl.append(field.toConfig());
         }
         for(College college:colleges){
-            vl.append(college.CollegeToConfig());
+            vl.append(college.toConfig());
         }
 
-        try(FileWriter writer = new FileWriter("configs/config_new_new.txt", false))
+        try(FileWriter writer = new FileWriter("configs/config_copy.txt", false))
         {
             writer.write(vl.toString());
         }
@@ -115,14 +118,10 @@ public class mapSlideController implements Initializable {
         List<Config> configs = parser.getConfigs();
 
         for(Config config : configs){
+
             // set colleges
             if(config.configCollege != null){
-                College college = new College(
-                        config.configCollege.path,
-                        config.configCollege.width,
-                        config.configCollege.height,
-                        paneMap
-                );
+                College college = new College(paneMap,config.configCollege);
                 college.setLayoutX(config.configCollege.cordX);
                 college.setLayoutY(config.configCollege.cordY);
                 colleges.add(college);
@@ -132,25 +131,39 @@ public class mapSlideController implements Initializable {
             // set menu
             if (config.configTable != null) {
                 menu = new Menu(paneMap);
-                menu.setFieldsOfConfig(config.configTable);
+                menu.setConfig(config.configTable);
             }
 
             // set pipe
             if(config.configPipe != null) {
-                Pipe pipe2 = new Pipe(paneMap);
-                pipe2.setConfig(config);
-                pipeList.add(config.configPipe.name, pipe2);
-                pipes.add(pipe2);
+                Pipe pipe = new Pipe(paneMap,config.configPipe);
+                pipeList.add(config.configPipe.name, pipe);
+                pipes.add(pipe);
                 if(menu != null){
-                    pipe2.connect(menu);
+                    pipe.connect(menu);
                 }
-                pipe2.off();
+                pipe.off();
+            }
+
+            // set field
+            if(config.configField != null){
+                Field field = new Field(paneMap,config.configField);
+                pipeList.add(config.configField.name,field);
+                fieldList.add(field);
+                if(menu != null){
+                    field.connect(menu);
+                }
+                field.off();
             }
         }
         for(Pipe pipe:pipes){
             pipe.setColleges(colleges);
         }
+        for(Field field: fieldList){
+            field.setColleges(colleges);
+        }
         VboxList.collegeList = colleges;
+
     }
 
     /**
@@ -166,6 +179,7 @@ public class mapSlideController implements Initializable {
         parentPane.setScaleX(coeff);
         parentPane.setScaleY(coeff);
 
+        // set to middle
         parentPane.setTranslateX((parentPane.getPrefWidth() * coeff - parentPane.getPrefWidth())/2
              + (width - parentPane.getPrefWidth() * coeff)/2
         );

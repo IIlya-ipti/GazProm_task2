@@ -3,13 +3,17 @@ package parser;
 import engine.UserPath;
 import engine.UtilityFunctions;
 
+
+
+
 /**
  * this class contains all information from config file
  * */
 public class Config {
-    public ConfigPipe configPipe;
-    public ConfigTable configTable;
-    public ConfigCollege configCollege;
+    public ConfigPipe       configPipe;
+    public ConfigTable      configTable;
+    public ConfigCollege    configCollege;
+    public ConfigField      configField;
 
     public static ConfigPipe getConfigPipe(String string){
         ConfigPipe configPipe = new ConfigPipe();
@@ -79,8 +83,62 @@ public class Config {
         }
         return configCollege;
     }
+    public static ConfigField getConfigField(String string){
+        ConfigField configField = new ConfigField();
+        String[] arStr = string.split(",");
+        for(String str: arStr){
+            String[] arArStr = str.split("=");
+            if(arArStr[0].equals("path")){
+                configField.path = UserPath.valueOf(arArStr[1]);
+            }
+            if(arArStr[0].equals("cordX")){
+                configField.cordX = Double.parseDouble(arArStr[1]);
+            }
+            if(arArStr[0].equals("cordY")){
+                configField.cordY = Double.parseDouble(arArStr[1]);
+            }
+            if(arArStr[0].equals("width")){
+                configField.width = Double.parseDouble(arArStr[1]);
+            }
+            if(arArStr[0].equals("height")){
+                configField.height = Double.parseDouble(arArStr[1]);
+            }
+            if(arArStr[0].equals("name")){
+                configField.name = arArStr[1];
+            }
+        }
+        return configField;
+    }
     public String toString(){
         StringBuilder str = new StringBuilder("###\n");
+        if(this.configField != null){
+            str.
+                    append("field_\n");
+            str.
+                    append("name=").
+                    append(this.configField.name).
+                    append(",\n");
+            str.
+                    append("path=").
+                    append(this.configField.path).
+                    append(",\n");
+            str.
+                    append("cordX=").
+                    append(this.configField.cordX).
+                    append(",\n");
+            str.
+                    append("cordY=").
+                    append(this.configField.cordY).
+                    append(",\n");
+            str.
+                    append("width=").
+                    append(this.configField.width).
+                    append(",\n");
+            str.
+                    append("height=").
+                    append(this.configField.height);
+            str.append("__\n");
+        }
         if(this.configCollege != null){
             str.
                     append("college_\n");

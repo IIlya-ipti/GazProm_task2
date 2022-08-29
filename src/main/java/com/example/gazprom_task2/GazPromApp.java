@@ -23,16 +23,16 @@ public class GazPromApp extends Application {
         stage.initStyle(StageStyle.UTILITY);
 
         //
-        FXMLLoader fxmlLoader =  new FXMLLoader(mapSlideController.class.getResource("Map_one_one_copy.fxml"));
-        FXMLLoader fxmlLoader_ = new FXMLLoader(objectController.class.getResource("user_map.fxml"));
+        FXMLLoader fxmlLoader =  new FXMLLoader(MapSlideController.class.getResource("Map_one_one_copy.fxml"));
+        FXMLLoader fxmlLoader_ = new FXMLLoader(ObjectController.class.getResource("user_map.fxml"));
 
         // load fxml and control classes
         Parent page_one = fxmlLoader.load();
         Parent page_two = fxmlLoader_.load();
 
 
-        mapSlideController controller =    fxmlLoader.getController();
-        objectController controller1 =   fxmlLoader_.getController();
+        MapSlideController controller =    fxmlLoader.getController();
+        ObjectController controller1 =   fxmlLoader_.getController();
 
         // to switch between slides
         controller.setNextScene(page_one,page_two);
@@ -41,15 +41,17 @@ public class GazPromApp extends Application {
         // for invisible interactions
         Pane vBox = new Pane(page_two,page_one);
 
-        // set bound for scene
+        // set bound for scene (for scale slides)
         Rectangle2D primaryScreenBounds = Screen.getPrimary().getBounds();
         Scene scene = new Scene(vBox,primaryScreenBounds.getWidth(), primaryScreenBounds.getHeight(),null);
 
+        // disable two slide
         page_two.setVisible(false);
         page_two.setDisable(true);
 
         stage.setScene(scene);
 
+        // scale slides
         controller.update(scene);
         controller1.update(scene);
 

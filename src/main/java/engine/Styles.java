@@ -15,4 +15,5 @@ public class Styles {
     public static String fontFamily = "calibri";
     public static Color fieldUserColor = Color.valueOf("#006699");
     public static Font fontUser = Font.font(fontFamily,8);
+    public static String styleYearId = "-fx-font-family: 'Times New Roman'; -fx-font-size: 14;";
 }

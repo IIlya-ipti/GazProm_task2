@@ -5,10 +5,7 @@ import engine.*;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
-import javafx.embed.swing.SwingFXUtils;
 import javafx.geometry.Point2D;
-import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.Image;
 import javafx.scene.layout.Pane;
@@ -16,10 +13,6 @@ import javafx.util.Duration;
 import parser.Config;
 import parser.ConfigCollege;
 
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -39,22 +32,22 @@ public class College extends UsedObject {
     private Image circleOn;
     private Image circleOff;
 
-    public College(UserPath userPath,double width, double height,Pane pane)  {
+    public College(Pane parentPane,ConfigCollege configCollege)  {
         super(UserPath.getImageViewSetWidthHeight(
-                    userPath,
-                    width,
-                    height,
+                    configCollege.path,
+                    configCollege.width,
+                    configCollege.height,
                     true)
         );
         ImageView imageView = getImageObject();
-        this.userPath = userPath;
-        this.parentPane = pane;
+        this.userPath = configCollege.path;
+        this.parentPane = parentPane;
 
         // get grey image version
         this.greyImage = UserPath.getImageViewSetWidthHeight(
-                userPath,
-                width,
-                height,
+                configCollege.path,
+                configCollege.width,
+                configCollege.height,
                 true,
                 true
         ).getImage();
@@ -63,8 +56,11 @@ public class College extends UsedObject {
         // add circle and animation for circle
         addCircle();
 
-        pane.getChildren().add(imageView);
+        parentPane.getChildren().add(imageView);
         imageView.toFront();
+
+        this.setLayoutX(configCollege.cordX);
+        this.setLayoutY(configCollege.cordY);
     }
 
     /**
@@ -176,7 +172,7 @@ public class College extends UsedObject {
     /**
     * get config object of college
     * */
-    public Config CollegeToConfig(){
+    public Config toConfig(){
         Config config = new Config();
         config.configCollege = new ConfigCollege();
         config.configCollege.path = this.userPath;

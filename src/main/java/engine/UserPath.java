@@ -12,6 +12,12 @@ import java.util.Objects;
  * */
 public enum UserPath {
 
+    FieldFirst(
+            "/com/example/gazprom_task2/GAZ.png"
+    ),
+    FieldSecond(
+            "/com/example/gazprom_task2/ZAVOD.png"
+    ),
     CollegeOne(
             "/marks/building.png"
     ),

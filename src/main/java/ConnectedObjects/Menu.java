@@ -192,7 +192,9 @@ public class Menu extends Information implements Animation {
     @Override
     public void on(){
         super.on();
+        getPane().toFront();
         if(actualMenu != null) {
+            actualMenu.getPane().toFront();
             // add animation to movement
             Timeline startPumpAnimation;
             KeyValue startXRect = new KeyValue(this.getPane().layoutXProperty(), this.getPane().getLayoutX(), Interpolator.LINEAR);
@@ -204,7 +206,6 @@ public class Menu extends Information implements Animation {
             startPumpAnimation.play();
         }
         actualMenu = this;
-        getPane().toFront();
     }
     @Override
     public void off() {
@@ -238,7 +239,7 @@ public class Menu extends Information implements Animation {
         return totalWorkers;
     }
 
-    public void setFieldsOfConfig(ConfigTable configTable){
+    public void setConfig(ConfigTable configTable){
         this.setPeriod(configTable.period);
         this.setShortProject(configTable.shortProject);
         this.setName(configTable.name);
@@ -248,6 +249,16 @@ public class Menu extends Information implements Animation {
             getPane().setLayoutX(Double.parseDouble(configTable.cordX));
             getPane().setLayoutY(Double.parseDouble(configTable.cordY));
         }
-
+    }
+    public ConfigTable toConfig(){
+        ConfigTable configTable = new ConfigTable();
+        configTable.name = this.getName().getText();
+        configTable.period = this.getPeriod().getText();
+        configTable.longProject = this.getLongProject().getText();
+        configTable.shortProject = this.getShortProject().getText();
+        configTable.totalWorkers = this.getTotalWorkers().getText();
+        configTable.cordX = String.valueOf(this.getPane().getLayoutX());
+        configTable.cordY = String.valueOf(this.getPane().getLayoutY());
+        return configTable;
     }
 }

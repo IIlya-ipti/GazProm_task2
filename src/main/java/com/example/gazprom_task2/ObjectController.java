@@ -1,6 +1,7 @@
 package com.example.gazprom_task2;
 
 import engine.Engine;
+import engine.Styles;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -16,7 +17,7 @@ import javafx.stage.Stage;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class objectController implements Initializable {
+public class ObjectController implements Initializable {
     private Engine engine;
     public Parent first;
     public Parent second;
@@ -231,14 +232,9 @@ public class objectController implements Initializable {
         yearID.getItems().add("2024");
         yearID.getItems().add("2025");
         yearID.getItems().add("2026");
-        yearID.setStyle("-fx-font-family: 'Times New Roman'; -fx-font-size: 14;");
+        yearID.setStyle(Styles.styleYearId);
         engine = new Engine(employeesPost,employeesID,workersPost,workersID,managersPost,managersID,totalPost,
                 totalID,post,ID);
-        afterInit();
-
-    }
-
-    private void afterInit() {
     }
 
     /**
@@ -249,7 +245,6 @@ public class objectController implements Initializable {
 
         double width = scene.getWidth();
         double height = scene.getHeight();
-        double WIDTH_CONST  = width/30;
 
         double coeff = Math.min(width/pane.getPrefWidth(),height/pane.getPrefHeight());
 
@@ -265,6 +260,10 @@ public class objectController implements Initializable {
         );
 
     }
+
+    /**
+     * set values to second slide...
+     * */
     public void setYear(String Data){
         int index = yearID.getItems().indexOf(Data);
         if(index == -1){

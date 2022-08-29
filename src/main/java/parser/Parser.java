@@ -57,7 +57,7 @@ public class Parser {
                     config.configCollege = Config.getConfigCollege(vl_arr[1]);
                 }
                 if(vl_arr[0].equals("field")){
-
+                    config.configField = Config.getConfigField(vl_arr[1]);
                 }
             }
 

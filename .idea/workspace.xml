@@ -6,7 +6,43 @@
   <component name="ChangeListManager">
     <list default="true" id="e0dd420a-27b6-4601-9222-4d9a14e7c636" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ConnectedObjects/ConnectedObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ConnectedObjects/ConnectedObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/config.txt" beforeDir="false" afterPath="$PROJECT_DIR$/configs/config.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/copy_config.txt" beforeDir="false" afterPath="$PROJECT_DIR$/configs/copy_config.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ConnectedObjects/College.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ConnectedObjects/College.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ConnectedObjects/Field.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ConnectedObjects/Field.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ConnectedObjects/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ConnectedObjects/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ConnectedObjects/Pipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ConnectedObjects/Pipe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Objects/VboxList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Objects/VboxList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gazprom_task2/GazPromApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gazprom_task2/GazPromApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gazprom_task2/mapSlideController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gazprom_task2/MapSlideController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gazprom_task2/objectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gazprom_task2/ObjectController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/engine/Styles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/engine/Styles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/engine/UserPath.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/engine/UserPath.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/parser/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parser/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/parser/ConfigField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parser/ConfigField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/parser/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parser/Parser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gazprom_task2/Map.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gazprom_task2/Map.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gazprom_task2/Map2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gazprom_task2/Map2.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gazprom_task2/Map3.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gazprom_task2/Map3.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gazprom_task2/Map4.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gazprom_task2/Map4.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gazprom_task2/Map_new.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gazprom_task2/Map_new.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gazprom_task2/Map_one_one.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gazprom_task2/Map_one_one.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gazprom_task2/Map_one_one_copy.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gazprom_task2/Map_one_one_copy.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gazprom_task2/user_map.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gazprom_task2/user_map.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ConnectedObjects/College.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ConnectedObjects/College.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ConnectedObjects/Field.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ConnectedObjects/Field.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ConnectedObjects/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ConnectedObjects/Menu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ConnectedObjects/Pipe.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ConnectedObjects/Pipe.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Objects/CheckBoxWrapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Objects/CheckBoxWrapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Objects/VboxList.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Objects/VboxList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/gazprom_task2/GazPromApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/gazprom_task2/GazPromApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/gazprom_task2/mapSlideController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/gazprom_task2/mapSlideController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/gazprom_task2/objectController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/gazprom_task2/objectController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/engine/Styles.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/engine/Styles.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/engine/UserPath.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/engine/UserPath.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/parser/Config.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/parser/Config.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/parser/ConfigField.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/parser/ConfigField.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/parser/Parser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/parser/Parser.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,6 +114,8 @@
       <updated>1661500145085</updated>
       <workItem from="1661500149371" duration="16288000" />
       <workItem from="1661517137350" duration="62000" />
+      <workItem from="1661586548682" duration="828000" />
+      <workItem from="1661760316787" duration="10834000" />
     </task>
     <servers />
   </component>
@@ -94,5 +132,36 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Objects/VboxList.java</url>
+          <line>68</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Objects/VboxList.java</url>
+          <line>76</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Objects/VboxList.java</url>
+          <line>81</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Objects/VboxList.java</url>
+          <line>84</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Objects/VboxList.java</url>
+          <line>86</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

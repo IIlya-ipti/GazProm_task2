@@ -1,5 +1,6 @@
 package Objects;
 
+import ConnectedObjects.Animation;
 import ConnectedObjects.College;
 import ConnectedObjects.Pipe;
 import engine.Styles;
@@ -22,10 +23,10 @@ public class VboxList {
         this.vBox = new VBox();
         vBox.setSpacing(spacing);
     }
-    public void add(String val, Pipe pipe){
+    public void add(String val, Animation animObject){
         CheckBox checkBox = getCheckBox(val);
         vBox.getChildren().add(checkBox);
-        new CheckBoxWrapper(checkBox,pipe);
+        new CheckBoxWrapper(checkBox,animObject);
     }
     public VBox getVBox() {
         return vBox;
@@ -56,10 +57,10 @@ public class VboxList {
 /**
  * entity for linking a pipe and list of pipes
  * */
-record CheckBoxWrapper(CheckBox checkBox, Pipe wrapper) {
+record CheckBoxWrapper(CheckBox checkBox, Animation wrapper) {
     static CheckBoxWrapper actualCheckBox = null;
 
-    CheckBoxWrapper(CheckBox checkBox, Pipe wrapper) {
+    CheckBoxWrapper(CheckBox checkBox, Animation wrapper) {
         this.checkBox = checkBox;
         this.wrapper = wrapper;
 

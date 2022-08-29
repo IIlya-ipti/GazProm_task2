@@ -37,8 +37,9 @@ public class Pipe implements ConnectedObject,Animation{
     // nearest objects (colleges)
     private final List<College> collegeList = new ArrayList<>();
 
-    public Pipe(Pane paneParent){
+    public Pipe(Pane paneParent, ConfigPipe configPipe){
         this.paneParent = paneParent;
+        this.setConfig(configPipe);
     }
 
     public Pane getPaneParent() {
@@ -199,6 +200,7 @@ public class Pipe implements ConnectedObject,Animation{
                 line.setDisable(false);
             }
         }
+        // enable colleges (first three)
         for (College college:collegeList){
             college.on();
         }
@@ -217,6 +219,7 @@ public class Pipe implements ConnectedObject,Animation{
                 line.setDisable(true);
             }
         }
+        // disable colleges (first three)
         for (College college:collegeList){
             college.off();
         }
@@ -253,10 +256,10 @@ public class Pipe implements ConnectedObject,Animation{
         doubleList[listSize * 2 + 1] = lineList.get(listSize - 1).getEndY();
         return doubleList;
     }
-    public void setConfig(Config config){
-        this.name = config.configPipe.name;
-        if(config.configPipe.coords != null) {
-            for(double[] doubleValues : config.configPipe.coords) {
+    public void setConfig(ConfigPipe configPipe){
+        this.name = configPipe.name;
+        if(configPipe.coords != null) {
+            for(double[] doubleValues : configPipe.coords) {
                 addLine(doubleValues);
             }
         }
@@ -266,20 +269,13 @@ public class Pipe implements ConnectedObject,Animation{
         return menu;
     }
 
-    public Config pipeToConfig(){
+    public Config toConfig(){
         Config config = new Config();
         config.configPipe = new ConfigPipe();
         config.configPipe.name = this.name;
         config.configPipe.coords = this.getAllPoints();
         if(this.menu != null) {
-            config.configTable = new ConfigTable();
-            config.configTable.name = this.menu.getName().getText();
-            config.configTable.period = this.menu.getPeriod().getText();
-            config.configTable.longProject = this.menu.getLongProject().getText();
-            config.configTable.shortProject = this.menu.getShortProject().getText();
-            config.configTable.totalWorkers = this.menu.getTotalWorkers().getText();
-            config.configTable.cordX = String.valueOf(this.menu.getPane().getLayoutX());
-            config.configTable.cordY = String.valueOf(this.menu.getPane().getLayoutY());
+            config.configTable = menu.toConfig();
         }
         return config;
     }
