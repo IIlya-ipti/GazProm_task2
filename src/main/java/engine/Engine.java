@@ -51,6 +51,9 @@ public final class Engine {
 
     }
 
+    /**
+     * this method fot update table values
+     * */
     public void update(String year, double MG, int GPA, int GRC, boolean smallPeopleTech) {
         int employeesPost;
         int employeesId;
@@ -67,7 +70,7 @@ public final class Engine {
 
         managersPost = (int) (MG / 2 + GPA * 9 + GRC);
         managersId = 10 + GPA;
-
+        
         employees_post.setText(String.valueOf(employeesPost));
         employees_id.setText(String.valueOf(employeesId));
 
