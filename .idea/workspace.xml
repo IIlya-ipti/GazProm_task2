@@ -5,22 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e0dd420a-27b6-4601-9222-4d9a14e7c636" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/configs/config_copy.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs/config_new.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs/config_new_new.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs/copy_config.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/gazprom_task2/GazPromApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/gazprom_task2/GazPromApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/gazprom_task2/Map.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/gazprom_task2/Map.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/gazprom_task2/Map2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/gazprom_task2/Map2.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/gazprom_task2/Map3.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/gazprom_task2/Map3.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/gazprom_task2/Map4.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/gazprom_task2/Map4.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/gazprom_task2/Map_new.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/gazprom_task2/Map_new.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/gazprom_task2/Map_one_one.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/gazprom_task2/Map_one_one.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/gazprom_task2/Map_one_one_copy.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/gazprom_task2/Map_one_one_copy.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/gazprom_task2/mapSlideController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/gazprom_task2/mapSlideController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/gazprom_task2/objectController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/gazprom_task2/objectController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/gazprom_task2/user_map.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/gazprom_task2/user_map.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,6 +80,7 @@
       <workItem from="1661586548682" duration="828000" />
       <workItem from="1661760316787" duration="10834000" />
       <workItem from="1661772310070" duration="32000" />
+      <workItem from="1661772467463" duration="10000" />
     </task>
     <servers />
   </component>
