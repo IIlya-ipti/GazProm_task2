@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
-<Pane fx:id="Pane_first" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gazprom_task2.mapSlideController">
+<Pane fx:id="Pane_first" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gazprom_task2.MapSlideController">
    <children>
       <Pane fx:id="pane" prefHeight="397.0" prefWidth="733.0">
          <children>
